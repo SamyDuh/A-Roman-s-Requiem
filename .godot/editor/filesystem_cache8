@@ -1,87 +1,69 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725241953
-camera_2d.tscn::PackedScene::1416221151934880063::1725241953::0::1::::<><>::res://Scenes/Camera2D.gd
-debug.tscn::PackedScene::8175761146091531266::1725241953::0::1::::<><>::uid://cmmapmqqu28k6::::res://player_test.tscn
-enemy.tscn::PackedScene::948739003532206357::1725241953::0::1::::<><>::res://Scenes/Enemy.gd<>uid://b6t5hem2wp7gj::::res://Sprites/Character Spritesheets/longitaliangrunt.png<>uid://m65kd2l4cf0p::::res://Sprites/Character Attachments/longitalianarm.png<>uid://bfbcex6mxccrk::::res://Sprites/Character Attachments/italianspear.png<>uid://dajh6lmv67c8a::::res://Sprites/swish_tall.png<>uid://cnwrin4dto4a0::::res://Sprites/Character Attachments/italiantalldeath.png
-NewPlayer.gd::GDScript::-1::1725241953::0::1::::<>CharacterBody2D<>::
-player_test.tscn::PackedScene::5639907466751747087::1725241953::0::1::::<><>::res://NewPlayer.gd<>uid://cq5w4vk8t1vra::::res://Sprites/peterwalkcycle1.png
-smallenemy.gd::GDScript::-1::1716946012::0::1::::<>CharacterBody2D<>::
-smallenemy.tscn::PackedScene::5497709113929105438::1725241953::0::1::::<><>::res://smallenemy.gd<>uid://rq4ljpl1yixl::::res://Sprites/Character Spritesheets/smallitaliangrunt.png<>uid://skw6ccngjs01::::res://Sprites/Character Attachments/smallitalianarm.png<>uid://b4wf5iv6tuq2l::::res://Sprites/Character Attachments/italian sword.png<>uid://gdyo0v476mtr::::res://Sprites/Character Attachments/italiansmalldeath.png<>uid://dajh6lmv67c8a::::res://Sprites/swish_tall.png
-straightlinenemy.gd::GDScript::-1::1717200569::0::1::::<>CharacterBody2D<>::
-straight_runner.tscn::PackedScene::7334617840746434456::1716947623::0::1::::<><>::res://straightlinenemy.gd
-::res://Scenes/::1725241953
-Camera2D.gd::GDScript::-1::1725241576::0::1::::<>Camera2D<>::
-controls.gd::GDScript::-1::1714717411::0::1::::<>Control<>::
-controls.tscn::PackedScene::569703763371950049::1720495930::0::1::::<><>::res://Scenes/controls.gd<>uid://r6pvhme0yjwr::::res://Sprites/Black.png<>uid://bccncrr1mxibl::::res://Sprites/logo.png
-Enemy.gd::GDScript::-1::1717304585::0::1::::<>CharacterBody2D<>::
-level1.gd::GDScript::-1::1714717411::0::1::::<>Node2D<>::
-level1.tscn::PackedScene::1310144136781114936::1725241953::0::1::::<><>::res://Scenes/level1.gd<>uid://bp6a38obx80mh::::res://Tilesets/meadowgrassanimation.png<>uid://cxiwuqq6h3qis::::res://Tilesets/ARRLv1Tileset3.png<>uid://bkprbqt261yqc::::res://Scenes/player.tscn<>uid://lj3i7ueb2wq8::::res://Tilesets/ARRLv1TileSet.png<>uid://yju3hx8b3n2f::::res://Tilesets/Ground/ARRLv1TileSet2.png<>uid://uga7qrnog472::::res://camera_2d.tscn<>uid://5fxou4xge7a7::::res://Scenes/pause_menu.tscn
-main_menu.gd::GDScript::-1::1720496414::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::8993135939846138397::1725241953::0::1::::<><>::res://Scenes/main_menu.gd<>uid://b7eyjlvq3xeyy::::res://Sprites/Screenshot 2024-05-02 at 1.43.19 PM.png<>uid://exes5m7xjs36::::res://Sprites/Screenshot 2024-05-02 at 1.44.52 PM.png<>uid://ds5ll3r06jijn::::res://Sprites/gray-gradient-transparent-rectangle-shadow-png.png<>uid://ba6yr7m0mkj14::::res://Sprites/pixellogo.png
-pause_menu.gd::GDScript::-1::1714717411::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::2117409786179125568::1720495930::0::1::::<><>::uid://ds5ll3r06jijn::::res://Sprites/gray-gradient-transparent-rectangle-shadow-png.png<>res://Scenes/pause_menu.gd<>uid://ba6yr7m0mkj14::::res://Sprites/pixellogo.png
-player.tscn::PackedScene::3120309632049375586::1725241953::0::1::::<><>::res://NewPlayer.gd<>uid://cmx4ak368712k::::res://Sprites/Screenshot 2024-03-08 at 4.13.00 PM.png<>uid://cq5w4vk8t1vra::::res://Sprites/peterwalkcycle1.png<>uid://cy68ahmuvpcva::::res://Sprites/Character Attachments/swordofthespirit.png<>uid://c3svjv76p4sgv::::res://Sprites/swish_diagonal.png<>uid://bycw5wkr6n4p1::::res://Sprites/HUD GUI Elements/velocitymeter.png
-::res://Scripts/::1725237635
-Player.gd::GDScript::-1::1725237635::0::1::::<>CharacterBody2D<>::
-::res://Sprites/::1716860920
-Black.png::CompressedTexture2D::1258154695203111921::1714717411::1714717411::1::::<><>::
-d5idnkk-885e95e6-550d-426d-8755-a91c974444e0.jpg::CompressedTexture2D::8267740550551211426::1711853635::1711853635::1::::<><>::
-ezgif-3-0ab51abf42.png::CompressedTexture2D::6335385521577109771::1711853635::1711853635::1::::<><>::
-ezgif-3-959be37daf.png::CompressedTexture2D::8819957597684773940::1711853635::1711853635::1::::<><>::
-gray-gradient-transparent-rectangle-shadow-png.png::CompressedTexture2D::8485281597932218743::1714717411::1714717411::1::::<><>::
-icon.svg::CompressedTexture2D::2669323203309610739::1711853635::1714861959::1::::<><>::
-image copy.png::CompressedTexture2D::8949041901566644936::1711853635::1711853635::1::::<><>::
-image.png::::-1::0::0::0::::<><>::
-logo.png::CompressedTexture2D::2531720939327957061::1714717411::1714717411::1::::<><>::
-peterwalkcycle1.png::CompressedTexture2D::5959182880044821046::1711853635::1711855965::1::::<><>::
-pixellogo.png::CompressedTexture2D::2451905660828916069::1716860914::1716860920::1::::<><>::
-Screenshot 2024-02-26 at 2.59.55 PM.png::CompressedTexture2D::2566616486548550444::1711853635::1711853635::1::::<><>::
-Screenshot 2024-02-29 at 9.08.09 PM.png::CompressedTexture2D::4494821623887090369::1711853635::1711853635::1::::<><>::
-Screenshot 2024-02-29 at 9.59.11 PM.png::CompressedTexture2D::5707859095345009423::1711853635::1711853635::1::::<><>::
-Screenshot 2024-03-08 at 4.13.00 PM.png::CompressedTexture2D::5664349542118104056::1711934677::1711934679::1::::<><>::
-Screenshot 2024-05-02 at 1.43.19 PM.png::CompressedTexture2D::4642195082060953616::1714717411::1714717411::1::::<><>::
-Screenshot 2024-05-02 at 1.44.52 PM.png::CompressedTexture2D::328512670880060503::1714717411::1714717411::1::::<><>::
-swish_diagonal.png::CompressedTexture2D::6776580071671223009::1714717411::1714717411::1::::<><>::
-swish_tall.png::CompressedTexture2D::7178322426717594234::1714717411::1714717411::1::::<><>::
-::res://Sprites/Character Attachments/::1716944192
-italian sword.png::CompressedTexture2D::4467671072628722385::1711853635::1711855965::1::::<><>::
-italiansmalldeath.png::CompressedTexture2D::428809750917706655::1716944191::1716944192::1::::<><>::
-italianspear.png::CompressedTexture2D::2739559113300507796::1711853635::1711855965::1::::<><>::
-italiantalldeath.png::CompressedTexture2D::5731759848263367629::1716863088::1716863138::1::::<><>::
-longitalianarm.png::CompressedTexture2D::908101401572682869::1711853635::1711855965::1::::<><>::
-smallitalianarm.png::CompressedTexture2D::1285434205212457724::1711853635::1711855965::1::::<><>::
-swordofthespirit.png::CompressedTexture2D::6523373372974593818::1711855877::1711855965::1::::<><>::
-::res://Sprites/Character Spritesheets/::1711855965
-longitaliangrunt.png::CompressedTexture2D::4603332254027405069::1711853635::1711855965::1::::<><>::
-peterwalkcycle1.png::CompressedTexture2D::5959182880044821046::1711853635::1711855965::1::::<><>::
-smallitaliangrunt.png::CompressedTexture2D::1228021318852393529::1711853635::1711855965::1::::<><>::
-::res://Sprites/HUD GUI Elements/::1711865925
-velocitymeter.png::CompressedTexture2D::4076472205948127876::1711865925::1711858576::1::::<><>::
-::res://Tilesets/::1716947077
-60e4319e13a64ae0df0b7545_image22.png::CompressedTexture2D::6408791429245627968::1711853635::1711853635::1::::<><>::
-ARRLv1Tileset3.png::CompressedTexture2D::6405072149321830034::1716354043::1716354045::1::::<><>::
-ARRLv1TileSet.png::CompressedTexture2D::792372753781052545::1711853635::1711853635::1::::<><>::
-enemy.tscn::PackedScene::-1::1716947077::0::1::::<><>::
-meadowgrassanimation.png::CompressedTexture2D::3503300805844091035::1716531338::1716531339::1::::<><>::
-TX Plant.png::CompressedTexture2D::1322915022158866940::1711853635::1711853635::1::::<><>::
-TX Props.png::CompressedTexture2D::6553710969982989103::1711853635::1711853635::1::::<><>::
-TX Struct.png::CompressedTexture2D::5005395443357869844::1711853635::1711853635::1::::<><>::
-TX Tileset Grass.png::CompressedTexture2D::6159681745405445034::1711853635::1711853635::1::::<><>::
-TX Tileset Stone Ground.png::CompressedTexture2D::2038551166256866116::1711853635::1711853635::1::::<><>::
-TX Tileset Wall.png::CompressedTexture2D::2638313956163209837::1711853635::1711853635::1::::<><>::
-::res://Tilesets/animatedtextures/::1716531748
-meadowgrass1.png::CompressedTexture2D::6214679454648475427::1716531715::1716531748::1::::<><>::
-meadowgrass2.png::CompressedTexture2D::1952828401796171434::1716531732::1716531748::1::::<><>::
-meadowgrass3.png::CompressedTexture2D::6959977538967788004::1716531747::1716531748::1::::<><>::
-::res://Tilesets/Building/::1711853635
-60e4319e13a64ae0df0b7545_image22.png::CompressedTexture2D::6408791429245627968::1711853635::1711853635::1::::<><>::
-TX Struct.png::CompressedTexture2D::5005395443357869844::1711853635::1711853635::1::::<><>::
-TX Tileset Wall.png::CompressedTexture2D::2638313956163209837::1711853635::1711853635::1::::<><>::
-::res://Tilesets/Ground/::1715138629
-ARRLv1TileSet2.png::CompressedTexture2D::1704376393879755935::1715138628::1715138629::1::::<><>::
-ARRLv1TileSet.png::CompressedTexture2D::792372753781052545::1714861947::1714861947::1::::<><>::
-TX Tileset Grass.png::CompressedTexture2D::6159681745405445034::1711853635::1711853635::1::::<><>::
-TX Tileset Stone Ground.png::CompressedTexture2D::2038551166256866116::1711853635::1711853635::1::::<><>::
-::res://Tilesets/Scenery/::1711853635
-TX Plant.png::CompressedTexture2D::1322915022158866940::1711853635::1711853635::1::::<><>::
-TX Props.png::CompressedTexture2D::6553710969982989103::1711853635::1711853635::1::::<><>::
+::res://::1737339515
+Credits.txt::TextFile::-1::1733376438::0::1::::<><>::
+icon.svg::CompressedTexture2D::792192833835321752::1730675076::1730675080::1::::<><>::
+::res://Assets/::1731403577
+::res://Assets/Backgrounds/::1731121943
+Screenshot 2024-05-02 at 1.43.19 PM.png::CompressedTexture2D::2658714316676864330::1731121939::1731121943::1::::<><>::
+::res://Assets/Fonts/::1733376453
+C_BOX.TTF::FontFile::2194105878482897216::1018853130::1733376453::1::::<><>::
+C_BOX_D.TTF::FontFile::472440128064434218::1018853202::1733376453::1::::<><>::
+PrStart.ttf::FontFile::7440908847449666194::1005932950::1730678192::1::::<><>::
+prstartk.ttf::FontFile::8506870700188679875::1014923002::1730678192::1::::<><>::
+::res://Assets/Sprites/::1730675815
+::res://Assets/Sprites/Character Spritesheets/::1737096769
+::res://Assets/Sprites/Character Spritesheets/Dummy/::1737098643
+dummy_single.png::CompressedTexture2D::6783672802475646786::1737096666::1737098643::1::::<><>::
+fulldummyspritesheet.png::CompressedTexture2D::7396275579607731207::1737098633::1737098643::1::::<><>::
+::res://Assets/Sprites/Character Spritesheets/Peter/::1732784298
+petercapecycle.png::CompressedTexture2D::8070243727838959981::1732783946::1732784068::1::::<><>::
+peterdashaura.png::CompressedTexture2D::1741226280362395978::1729810963::1730676040::1::::<><>::
+peterhead.png::CompressedTexture2D::1359191168958499465::1732783957::1732784068::1::::<><>::
+peterleftarmcycle.png::CompressedTexture2D::5607151028469893208::1732783992::1732784068::1::::<><>::
+peterlefthandcycle.png::CompressedTexture2D::2009963864458794125::1732784002::1732784068::1::::<><>::
+peterlegscycle.png::CompressedTexture2D::6620811313857762318::1732784037::1732784068::1::::<><>::
+peterrightarmcycle.png::CompressedTexture2D::1124254531194580318::1732784065::1732784068::1::::<><>::
+swordofthespirit.png::CompressedTexture2D::1989754777958001951::1732784274::1732784298::1::::<><>::
+swordslash.png::CompressedTexture2D::5692920153112716004::1732784295::1732784298::1::::<><>::
+::res://Assets/Sprites/HUD/::1732785532
+godspeedtext.png::CompressedTexture2D::1768207956162538191::1732785530::1732785532::1::::<><>::
+velocitymeter.png::CompressedTexture2D::636157308130246574::1711862325::1730676040::1::::<><>::
+::res://Assets/Sprites/Logo/::1730676040
+logo.png::CompressedTexture2D::1984374220952129881::1714713811::1730676040::1::::<><>::
+pixellogo.png::CompressedTexture2D::2015731852607104198::1716857314::1730676040::1::::<><>::
+::res://Assets/TEMPORARY/::1731403663
+ruler.png::CompressedTexture2D::1670663207417034639::1731403659::1731403663::1::::<><>::
+::res://Assets/Themes/::1733377342
+FancyTheme.tres::Theme::6496849708331590985::1733377342::0::1::::<><>::uid://6i3urmml80bc::::res://Assets/Fonts/C_BOX.TTF
+PixelTheme.tres::Theme::8497782609233345309::1733376523::0::1::::<><>::uid://6i3urmml80bc::::res://Assets/Fonts/C_BOX.TTF
+::res://Assets/Tilesets/::1731634198
+level1tileset.png::CompressedTexture2D::7487982808629862059::1731634197::1731634198::1::::<><>::
+::res://Scenes/::1737269324
+level_1.gd::GDScript::-1::1733552981::0::1::::<>Node2D<>::
+level_1.tscn::PackedScene::2897851093684749218::1737269324::0::1::::<><>::uid://damf4bmsex3h::::res://Scenes/Characters/peter.tscn<>res://Scenes/level_1.gd<>uid://x2jtxivko8kh::::res://Assets/TEMPORARY/ruler.png<>res://Scripts/level1camera.gd<>uid://0gsekp2hhalr::::res://Assets/Sprites/HUD/godspeedtext.png<>uid://dexh8of7bqef8::::res://Assets/Tilesets/level1tileset.png<>uid://dgqhtuj1rm75p::::res://Scripts/pause_menu.tscn<>uid://dsia18nsmtr1j::::res://Scenes/Characters/dummy.tscn
+title_screen.tscn::PackedScene::629166374852997780::1737265862::0::1::::<><>::uid://deaoxf6dniini::::res://Assets/Fonts/PrStart.ttf<>res://Scripts/title_screen.gd<>uid://3yo2rlji5jco::::res://Assets/Sprites/Logo/pixellogo.png<>uid://cytefvkunkmsv::::res://Assets/Themes/FancyTheme.tres<>uid://3jimav5u004t::::res://Assets/Sprites/Logo/logo.png<>uid://bd45vvvg7ialu::::res://Assets/Backgrounds/Screenshot 2024-05-02 at 1.43.19 PM.png
+::res://Scenes/Characters/::1737265862
+dummy.tscn::PackedScene::8439224443425544729::1737265862::0::1::::<><>::uid://ddm2twnb1j2j8::::res://Assets/Sprites/Character Spritesheets/Dummy/fulldummyspritesheet.png<>res://Scripts/dummy.gd<>uid://cxno16v82t2u2::::res://Sounds/wood_creak.wav<>uid://bfikbpp1nseyq::::res://Sounds/thud.mp3
+peter.tscn::PackedScene::211305589088241691::1737265862::0::1::::<><>::uid://c1lf2bbywuffq::::res://Assets/Sprites/Character Spritesheets/Peter/peterlegscycle.png<>res://Scripts/peter.gd<>uid://tmnxebvvy5ir::::res://Assets/Sprites/Character Spritesheets/Peter/peterhead.png<>uid://dm8jy82frnaen::::res://Assets/Sprites/Character Spritesheets/Peter/petercapecycle.png<>uid://cl5e7tybclrho::::res://Assets/Sprites/Character Spritesheets/Peter/peterleftarmcycle.png<>uid://3l37848ubb40::::res://Assets/Sprites/Character Spritesheets/Peter/swordofthespirit.png<>uid://3vv2ty7bwjmr::::res://Assets/Sprites/Character Spritesheets/Peter/peterlefthandcycle.png<>uid://cndxtfbb80q8k::::res://Assets/Sprites/Character Spritesheets/Peter/swordslash.png<>uid://qaukp5v7j8wg::::res://Assets/Sprites/Character Spritesheets/Peter/peterrightarmcycle.png<>uid://y2p0ii564rk1::::res://Assets/Sprites/Character Spritesheets/Peter/peterdashaura.png<>uid://cjpcwp2e2vlcf::::res://Sounds/stepleft.wav<>uid://if7w28lqtiwe::::res://Sounds/stepright.wav<>uid://c5pjw1yawjmww::::res://Sounds/swordwoosh.wav<>uid://c8blebsjilub8::::res://Sounds/swordunsheath.wav<>uid://cnog50s8m2ckt::::res://Sounds/swordfire.wav<>uid://djnkrcx85h65q::::res://Sounds/enemyhit.mp3
+::res://Scenes/Levels/::1731400477
+level_1.tscn::PackedScene::2764413081714416930::1731399869::0::1::::<><>::
+::res://Scenes/Menus/::1735527530
+pause_menu.tscn::PackedScene::-1::1735527297::0::1::::<><>::
+title_screen.tscn::PackedScene::4112211961777285853::1731399693::0::1::::<><>::uid://deaoxf6dniini::::res://Assets/Fonts/PrStart.ttf<>uid://dtcnidfvnnd1f::::res://Assets/Themes/PixelTheme.tres<>res://Scripts/title_screen.gd<>uid://3yo2rlji5jco::::res://Assets/Sprites/Logo/pixellogo.png<>uid://3jimav5u004t::::res://Assets/Sprites/Logo/logo.png<>uid://bd45vvvg7ialu::::res://Assets/Backgrounds/Screenshot 2024-05-02 at 1.43.19 PM.png
+::res://Scripts/::1737265862
+dummy.gd::GDScript::-1::1737265519::0::1::::<>CharacterBody2D<>::
+level1camera.gd::GDScript::-1::1737262585::0::1::::<>Camera2D<>::
+pause_menu.gd::GDScript::-1::1735536678::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::7613885171580803195::1737265862::0::1::::<><>::res://Scripts/pause_menu.gd<>uid://cytefvkunkmsv::::res://Assets/Themes/FancyTheme.tres<>uid://3jimav5u004t::::res://Assets/Sprites/Logo/logo.png
+peter.gd::GDScript::-1::1737264937::0::1::::<>CharacterBody2D<>::
+title_screen.gd::GDScript::-1::1733282088::0::1::::<>Control<>::
+::res://Sounds/::1737265077
+enemyhit.mp3::AudioStreamMP3::7818436225165392512::1737265070::1737265077::1::::<><>::
+sound credits.txt::TextFile::-1::1737264476::0::1::::<><>::
+stepleft.wav::AudioStreamWAV::5435668177669463181::1735542167::1735542247::1::::<><>::
+stepright.wav::AudioStreamWAV::573816338739919944::1735542182::1735542247::1::::<><>::
+swordfire.wav::AudioStreamWAV::5714616841417907623::1729389786::1735542873::1::::<><>::
+swordunsheath.wav::AudioStreamWAV::7091812696041275915::1729389629::1735542873::1::::<><>::
+swordwoosh.wav::AudioStreamWAV::6910059485951053658::1737089793::1737089872::1::::<><>::
+thud.mp3::AudioStreamMP3::2754489691859035440::1737099257::1737099294::1::::<><>::
+wood_creak.wav::AudioStreamWAV::6414919812604957783::1737099144::1737099294::1::::<><>::

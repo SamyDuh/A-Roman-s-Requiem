@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://i71jpxggjnuq"]
+
+[ext_resource type="FontFile" uid="uid://deaoxf6dniini" path="res://Assets/Fonts/PrStart.ttf" id="1_16mra"]
+[ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_ppmil"]
+[ext_resource type="Texture2D" uid="uid://3yo2rlji5jco" path="res://Assets/Sprites/Logo/pixellogo.png" id="1_w7vnv"]
+[ext_resource type="Theme" uid="uid://cytefvkunkmsv" path="res://Assets/Themes/FancyTheme.tres" id="2_4jajm"]
+[ext_resource type="Texture2D" uid="uid://3jimav5u004t" path="res://Assets/Sprites/Logo/logo.png" id="2_gbmha"]
+[ext_resource type="Texture2D" uid="uid://bd45vvvg7ialu" path="res://Assets/Backgrounds/Screenshot 2024-05-02 at 1.43.19 PM.png" id="5_543wt"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ppmil")
+
+[node name="OptionsBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 440.0
+offset_right = 1628.0
+offset_bottom = 1247.0
+scale = Vector2(0.431914, 0.502891)
+alignment = 1
+
+[node name="StartButton" type="Button" parent="OptionsBox"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
+theme = ExtResource("2_4jajm")
+theme_override_fonts/font = ExtResource("1_16mra")
+text = "Start Game"
+
+[node name="ControlsButton" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme = ExtResource("2_4jajm")
+theme_override_fonts/font = ExtResource("1_16mra")
+text = "Controls"
+
+[node name="CreditsButton" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme = ExtResource("2_4jajm")
+theme_override_fonts/font = ExtResource("1_16mra")
+text = "Credits"
+
+[node name="ExitButton" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme = ExtResource("2_4jajm")
+theme_override_fonts/font = ExtResource("1_16mra")
+text = "Exit Game"
+
+[node name="PixelLogo" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(345.151, 234)
+scale = Vector2(3.92453, 3.92453)
+texture = ExtResource("1_w7vnv")
+
+[node name="DrawnLogo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(574, 160)
+scale = Vector2(0.237944, 0.237944)
+texture = ExtResource("2_gbmha")
+
+[node name="TitleBackground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1216, 605)
+scale = Vector2(1.26844, 1.26844)
+texture = ExtResource("5_543wt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+layout_mode = 0
+offset_left = -68.0
+offset_top = -52.0
+offset_right = 618.0
+offset_bottom = 1143.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="OptionsBox/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="OptionsBox/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -1,8 +1,7 @@
-res://
 res://Scripts
+res://Sounds
+res://Scenes/Characters
+res://Assets/Themes
+res://Assets/Tilesets
 res://Scenes
-res://Tilesets
-res://Tilesets/animatedtextures
-res://Tilesets/Ground
-res://Sprites/HUD GUI Elements
-res://Sprites/Character Attachments
+res://Assets/Fonts
