@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var baseHorizontalSpeed = 50
-@export var baseVerticalSpeed = 100
+@export var baseVerticalSpeed = 40
 @export var canMove = false
 
 @onready var animation_tree = $AnimationTree
@@ -19,7 +19,7 @@ func _ready():
 	canMove = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	if not slashing:
 		if canMove:
 			_horizontal_movement()
@@ -87,4 +87,4 @@ func _horizontal_movement():
 	velocity.x = horizontal_input * baseHorizontalSpeed
 
 func _vertical_movement(delta):
-	velocity.y = -baseVerticalSpeed * delta * 144
+	velocity.y = -baseVerticalSpeed * delta * 150
