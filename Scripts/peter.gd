@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var animation_tree = $AnimationTree
 
 @onready var slashing = false
+@onready var holding = false
 @onready var invalid_slash = false
 @onready var slash_direction = Vector2.ZERO
 
@@ -20,7 +21,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if not slashing:
+	if not slashing and not holding:
 		if canMove:
 			_horizontal_movement()
 		_vertical_movement(delta)
@@ -33,13 +34,18 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if canMove and not slashing:
 			slash()
+	if Input.is_action_pressed("hold"):
+		velocity.y = 0
+		holding = true
+	else:
+		holding = false
 
 func slash():
 	
 	var mouse_position = get_global_mouse_position()
 	slash_direction = (mouse_position - global_position).normalized()
 	var rotation_angle = figure_slash_angle(slash_direction.angle())
-	if invalid_slash:
+	if invalid_slash or holding:
 		invalid_slash = false
 		return 0
 	slashing = true

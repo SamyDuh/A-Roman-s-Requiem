@@ -27,5 +27,5 @@ func _on_timer_timeout():
 	cameraModifier+=.01
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	position.y -= cameraSpeed * delta * cameraModifier
