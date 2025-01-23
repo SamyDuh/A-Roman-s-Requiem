@@ -9,6 +9,7 @@ extends CharacterBody2D
 @onready var slashing = false
 @onready var holding = false
 @onready var invalid_slash = false
+@onready var velocity_modifier = 1
 @onready var slash_direction = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
@@ -34,7 +35,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if canMove and not slashing:
 			slash()
-	if Input.is_action_pressed("hold") and canMove:
+	if Input.is_action_pressed("hold") and canMove and not slashing:
 		velocity.y = 0
 		velocity.x = 0
 		holding = true
