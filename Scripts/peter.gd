@@ -16,7 +16,7 @@ func _ready():
 	animation_tree.active = true
 	# Begins the 'starting animation'
 	animation_tree.set("parameters/playback", "sheathed_run")
-	await get_tree().create_timer(2.5).timeout
+	await get_tree().create_timer(2.9).timeout
 	canMove = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,8 +34,9 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if canMove and not slashing:
 			slash()
-	if Input.is_action_pressed("hold"):
+	if Input.is_action_pressed("hold") and canMove:
 		velocity.y = 0
+		velocity.x = 0
 		holding = true
 	else:
 		holding = false
