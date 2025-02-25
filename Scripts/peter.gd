@@ -6,9 +6,11 @@ extends CharacterBody2D
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
+@onready var velocity_meter = get_parent().get_node("Camera/VelocityMeter")
 
 @onready var slashing = false
 @onready var holding = false
+@onready var enemy_hit = false
 @onready var invalid_slash = false
 @onready var velocity_modifier = 1
 @onready var slash_direction = Vector2.ZERO
@@ -42,6 +44,7 @@ func _physics_process(delta):
 	if slashing:
 		check_slash_hitbox(delta)
 	move_and_slide()
+	velocity_meter._update_bar(velocity_modifier)
 	
 	
 func _input(event):
@@ -60,10 +63,15 @@ func slash():
 	slashing = true
 	animation_tree["parameters/conditions/slashing"] = true
 	rotation = rotation_angle
-	velocity += slash_direction * 200
+	var saved_modifier = velocity_modifier
+	velocity += slash_direction * 200 * saved_modifier
 	await get_tree().create_timer(.4).timeout
 	rotation = 0
-	velocity -= slash_direction * 200
+	velocity -= slash_direction * 200 * saved_modifier
+	if not enemy_hit:
+		velocity_modifier -= .2
+	else:
+		enemy_hit = false
 	slashing = false
 	animation_tree["parameters/conditions/slashing"] = false
 	
@@ -96,10 +104,22 @@ func check_slash_hitbox(delta):
 		if body.is_in_group("enemy"):
 			$"Sword Sound Effects/Hit Sound".play()
 			body._death()
+			_enemy_hit()
+			
+
+func _enemy_hit():
+	velocity_modifier += .1
+	enemy_hit = true
+	$V_DeprecationTimer.start()
 
 func _horizontal_movement():
 	var horizontal_input = Input.get_axis("left","right")
 	velocity.x = horizontal_input * baseHorizontalSpeed
 
 func _vertical_movement(delta):
-	velocity.y = -baseVerticalSpeed * delta * 150
+	velocity.y = -baseVerticalSpeed * delta * 150 * velocity_modifier
+
+
+func _on_v_deprecation_timer_timeout():
+	velocity_modifier -= .01
+	print(velocity_modifier)

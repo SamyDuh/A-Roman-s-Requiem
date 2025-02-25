@@ -1,3 +1,4 @@
+Timer
 ProgressBar
 Button
 AudioStreamPlayer2D
@@ -11,5 +12,3 @@ AnimationTree
 Control
 VBoxContainer
 BoxContainer
-Timer
-TileMap
