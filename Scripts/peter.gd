@@ -36,11 +36,14 @@ func _input(event):
 		if canMove and not slashing:
 			slash()
 	if Input.is_action_pressed("hold") and canMove and not slashing:
+		print("Im holding out man")
 		velocity.y = 0
 		velocity.x = 0
 		holding = true
+		animation_tree["parameters/conditions/holding"] = true
 	else:
 		holding = false
+		animation_tree["parameters/conditions/holding"] = false
 
 func slash():
 	
