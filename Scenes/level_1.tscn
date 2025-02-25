@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bhj0gi4d0loc5"]
+[gd_scene load_steps=14 format=3 uid="uid://bhj0gi4d0loc5"]
 
 [ext_resource type="PackedScene" uid="uid://damf4bmsex3h" path="res://Scenes/Characters/peter.tscn" id="1_6a6s7"]
 [ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_57xan"]
+[ext_resource type="PackedScene" uid="uid://tococwpustyt" path="res://Scenes/Menus/velocity_meter.tscn" id="2_1jwth"]
 [ext_resource type="Texture2D" uid="uid://x2jtxivko8kh" path="res://Assets/TEMPORARY/ruler.png" id="2_esb6j"]
 [ext_resource type="Script" path="res://Scripts/level1camera.gd" id="2_mk0k4"]
 [ext_resource type="Texture2D" uid="uid://0gsekp2hhalr" path="res://Assets/Sprites/HUD/godspeedtext.png" id="3_qvv0b"]
@@ -85,6 +86,9 @@ offset_right = 1446.0
 offset_bottom = 750.0
 scale = Vector2(0.5, 0.5)
 size_flags_horizontal = 4
+
+[node name="Velocity Meter" parent="Camera" instance=ExtResource("2_1jwth")]
+position = Vector2(-599, -381)
 
 [node name="IntroText" type="Sprite2D" parent="Camera"]
 z_index = 10

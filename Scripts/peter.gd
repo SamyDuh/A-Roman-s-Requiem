@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var canMove = false
 
 @onready var animation_tree = $AnimationTree
+@onready var state_machine = animation_tree.get("parameters/playback")
 
 @onready var slashing = false
 @onready var holding = false
@@ -22,6 +23,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if Input.is_action_pressed("hold") and canMove and not slashing:
+		print("Im holding out man")
+		velocity.y = 0
+		velocity.x = 0
+		if state_machine.get_current_node() != "hold":
+			holding = true
+			state_machine.travel("hold")
+		return
+	else:
+		holding = false
+		if state_machine.get_current_node() == "hold":
+			state_machine.travel("unsheated_run")
 	if not slashing and not holding:
 		if canMove:
 			_horizontal_movement()
@@ -35,15 +48,6 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if canMove and not slashing:
 			slash()
-	if Input.is_action_pressed("hold") and canMove and not slashing:
-		print("Im holding out man")
-		velocity.y = 0
-		velocity.x = 0
-		holding = true
-		animation_tree["parameters/conditions/holding"] = true
-	else:
-		holding = false
-		animation_tree["parameters/conditions/holding"] = false
 
 func slash():
 	

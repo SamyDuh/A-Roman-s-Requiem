@@ -1,6 +1,8 @@
+res://Scenes/title_screen.tscn
+res://Scripts/level1camera.gd
 res://Scenes/Characters/peter.tscn
 res://Scenes/level_1.tscn
 res://Scripts/pause_menu.tscn
-res://Scripts/peter.gd
-res://Scenes/title_screen.tscn
 res://Scenes/Characters/dummy.tscn
+res://Scripts/peter.gd
+res://Scenes/Menus/velocity_meter.tscn

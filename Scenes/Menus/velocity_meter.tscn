@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://tococwpustyt"]
+
+[node name="Velocity Meter" type="Node2D"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 374.0
+offset_top = 282.0
+offset_right = 594.0
+offset_bottom = 320.0
