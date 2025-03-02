@@ -21,8 +21,6 @@ func _on_window_focus_out():
 
 var cameraModifier = 1;
 
-# Called when the node enters the scene tree for the first time.
-
 func _on_timer_timeout():
 	cameraModifier+=.01
 

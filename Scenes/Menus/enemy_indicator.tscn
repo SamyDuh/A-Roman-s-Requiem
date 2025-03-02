@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://c50u33t8dlirc"]
+
+[ext_resource type="Texture2D" uid="uid://bpworuc74akdf" path="res://Assets/Sprites/HUD/enemyindicator.png" id="1_rrmac"]
+
+[sub_resource type="Animation" id="Animation_csn4b"]
+resource_name = "blink"
+length = 0.6
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7xq3l"]
+_data = {
+"blink": SubResource("Animation_csn4b")
+}
+
+[node name="enemy_indicator" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7xq3l")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rrmac")
+vframes = 3

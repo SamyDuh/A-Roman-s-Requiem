@@ -6,8 +6,8 @@
 script = ExtResource("1_fpq2l")
 
 [node name="VelocityProgress" type="ProgressBar" parent="."]
-offset_left = 374.0
-offset_top = 282.0
-offset_right = 594.0
-offset_bottom = 320.0
+offset_left = 371.0
+offset_top = 269.0
+offset_right = 591.0
+offset_bottom = 307.0
 max_value = 3.0

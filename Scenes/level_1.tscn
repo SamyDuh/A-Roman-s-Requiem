@@ -131,10 +131,10 @@ position = Vector2(709, -542)
 [node name="Dummy5" parent="." instance=ExtResource("8_eldjx")]
 position = Vector2(550.012, -688.115)
 
+[node name="Dummy7" parent="." instance=ExtResource("8_eldjx")]
+position = Vector2(723.78, -992.506)
+
 [node name="Dummy6" parent="." instance=ExtResource("8_eldjx")]
 position = Vector2(595.811, -835.507)
-
-[node name="Dummy" parent="Dummy6" instance=ExtResource("8_eldjx")]
-position = Vector2(127.969, -156.999)
 
 [connection signal="timeout" from="Camera/Timer" to="Camera" method="_on_timer_timeout"]
