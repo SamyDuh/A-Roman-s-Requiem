@@ -1,3 +1,6 @@
 Fonts:
 Chocolate Box - Paul Lloyd
 https://www.1001freefonts.com/chocolate-box.font
+
+Circle Transition - agurkas:
+https://godotshaders.com/shader/simple-circle-transition-2/

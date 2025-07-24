@@ -1,13 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://tococwpustyt"]
+[gd_scene load_steps=7 format=3 uid="uid://tococwpustyt"]
 
 [ext_resource type="Script" path="res://Scripts/velocity_meter.gd" id="1_fpq2l"]
+[ext_resource type="Texture2D" uid="uid://csybxyq0o2m1k" path="res://Assets/Sprites/HUD/velocitymeterbig.png" id="2_nsodw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rwta"]
+bg_color = Color(0.270487, 0.73233, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lnvg"]
+bg_color = Color(0, 0.823529, 0.921569, 0.392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e6vh"]
+bg_color = Color(0.607843, 0.941176, 0.937255, 0.929412)
+
+[sub_resource type="Theme" id="Theme_0ufvc"]
+/styles/color = SubResource("StyleBoxFlat_1rwta")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_6lnvg")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_7e6vh")
 
 [node name="VelocityMeter" type="Node2D"]
 script = ExtResource("1_fpq2l")
 
 [node name="VelocityProgress" type="ProgressBar" parent="."]
-offset_left = 371.0
-offset_top = 269.0
-offset_right = 591.0
-offset_bottom = 307.0
+offset_left = -101.0
+offset_top = -16.0
+offset_right = 94.0
+offset_bottom = 11.0
+theme = SubResource("Theme_0ufvc")
 max_value = 3.0
+
+[node name="Meter" type="Sprite2D" parent="."]
+position = Vector2(-5.99999, 10)
+scale = Vector2(0.866667, 0.866667)
+texture = ExtResource("2_nsodw")
+flip_h = true
+flip_v = true

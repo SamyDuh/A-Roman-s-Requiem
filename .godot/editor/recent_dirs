@@ -1,8 +1,10 @@
-res://Assets/Sprites/HUD
+res://Scenes/Shaders
+res://Scenes/Level Elements
 res://Scenes/Menus
-res://Scripts
 res://Sounds
+res://Scripts
 res://Scenes/Characters
+res://Assets/Sprites/HUD
 res://Assets/Themes
 res://Assets/Tilesets
 res://Scenes
