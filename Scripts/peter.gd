@@ -15,6 +15,7 @@ extends CharacterBody2D
 @onready var slashing = false
 @onready var holding = false
 @onready var dead = false
+@onready var really_dead = false
 @onready var enemy_hit = false
 @onready var invalid_slash = false
 @onready var shake_him = false
@@ -41,6 +42,9 @@ func _physics_process(delta):
 		velocity_modifier = 0
 		_death()
 		
+	if dead and not really_dead:
+		if Input.is_action_pressed("revive"):
+			cam._revive()
 	if shake_him:
 		if shaking:
 			var shake_offset = Vector2(randf_range(-.5,.5), randf_range(-.5,.5))

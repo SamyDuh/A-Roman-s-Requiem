@@ -27,6 +27,9 @@ extends Camera2D
 var moving = false
 
 func _ready():
+	
+	
+	
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	animation_player.play("godspeedtext")
 	get_viewport().focus_entered.connect(_on_window_focus_in)
@@ -97,7 +100,6 @@ func _close_in_circle():
 	shader_tween_2.tween_property(circle_shader, "shader_parameter/circle_size",.035,5)
 	if revived: return 0
 	await shader_tween_2.finished
-	_revive() # for testing
 	if revived: return 0
 	
 	var sepia_tween_3 = create_tween()
