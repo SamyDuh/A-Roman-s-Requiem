@@ -29,5 +29,14 @@ func _physics_process(delta):
 		position = original_pos
 	
 
+func _death_bar():
+	$Meter/Crack.visible = true
+	heavy_shake = true
+	_update_bar(0)
+	await get_tree().create_timer(1).timeout
+	heavy_shake = false
+
 func _update_bar(velocity):
-	velocity_meter.value = velocity
+	var bar_tween = create_tween()
+	bar_tween.tween_property(velocity_meter,"value",velocity,.5)
+	#velocity_meter.value = velocity

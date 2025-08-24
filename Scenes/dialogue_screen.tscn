@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjw2ptqkpsq2c"]
+
+[ext_resource type="Script" path="res://Scripts/dialogue_screen.gd" id="1_dnjjt"]
+[ext_resource type="Theme" uid="uid://dtcnidfvnnd1f" path="res://Assets/Themes/PixelTheme.tres" id="2_87uoi"]
+[ext_resource type="Texture2D" uid="uid://cqeqft6rijwb2" path="res://Assets/Sprites/HUD/pillar.png" id="2_aq6kk"]
+[ext_resource type="FontFile" uid="uid://deaoxf6dniini" path="res://Assets/Fonts/PrStart.ttf" id="3_bo8p8"]
+[ext_resource type="Texture2D" uid="uid://cqrveikem82ii" path="res://Assets/Sprites/Character Portraits/peter_portrait.png" id="4_nx2fw"]
+[ext_resource type="Texture2D" uid="uid://b8xdp56v37scd" path="res://Assets/Sprites/Character Portraits/mary_portrait.png" id="5_t0oy3"]
+[ext_resource type="Texture2D" uid="uid://ba5jwq6euwj2t" path="res://Assets/TEMPORARY/grasslandbackground.png" id="7_dlqwb"]
+[ext_resource type="Texture2D" uid="uid://blc1wlcmdqnhl" path="res://Assets/Sprites/HUD/portraitbox.png" id="8_rklhg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ufcf6"]
+font = ExtResource("3_bo8p8")
+
+[node name="DialogueScreen" type="Node2D"]
+position = Vector2(39, 27)
+script = ExtResource("1_dnjjt")
+
+[node name="Pillar Left2" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(1755, 539)
+scale = Vector2(4, 4)
+texture = ExtResource("2_aq6kk")
+
+[node name="Pillar Left" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(89, 539)
+scale = Vector2(4, 4)
+texture = ExtResource("2_aq6kk")
+flip_h = true
+
+[node name="Face Left" type="Sprite2D" parent="."]
+position = Vector2(438, 298)
+scale = Vector2(4, 4)
+texture = ExtResource("4_nx2fw")
+flip_h = true
+
+[node name="Face Right" type="Sprite2D" parent="."]
+position = Vector2(1393, 304)
+scale = Vector2(4, 4)
+texture = ExtResource("5_t0oy3")
+
+[node name="Voice" type="AudioStreamPlayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(946, 500)
+texture = ExtResource("7_dlqwb")
+metadata/_edit_lock_ = true
+
+[node name="Box" type="Sprite2D" parent="."]
+z_index = 105
+position = Vector2(921, 809)
+scale = Vector2(4, 4)
+texture = ExtResource("8_rklhg")
+
+[node name="Text" type="MarginContainer" parent="Box"]
+z_index = 12
+offset_left = -180.0
+offset_top = -43.0
+offset_right = 180.0
+offset_bottom = 49.0
+
+[node name="Label" type="Label" parent="Box/Text"]
+z_index = 101
+layout_mode = 2
+theme = ExtResource("2_87uoi")
+label_settings = SubResource("LabelSettings_ufcf6")
+autowrap_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Box"]
+z_index = 11
+z_as_relative = false
+offset_left = -189.25
+offset_top = -50.5
+offset_right = 190.75
+offset_bottom = 57.5
+color = Color(0.255659, 0.255659, 0.255659, 1)

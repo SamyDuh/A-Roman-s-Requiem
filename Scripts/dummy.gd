@@ -24,7 +24,8 @@ func _physics_process(delta):
 	distance_to_camera = -((self.global_position) - (camera.get_global_position())).y
 	if (distance_to_camera < 500 && !within_distance):
 		within_distance = true
-		create_enemy_indicator()
+		if not dead:
+			create_enemy_indicator()
 	elif ((distance_to_camera < 90 || distance_to_camera == 0) && !indicator_freed):
 		indicator_instance.queue_free()
 		indicator_freed = true
@@ -40,10 +41,7 @@ func create_enemy_indicator():
 	indicator_player.play("blink")
 	
 	for i in 6:
-		if not dead:
-			await get_tree().create_timer(.1).timeout
-			if not dead:
-				indicator_instance.modulate.a = .2 * i
+		await get_tree().create_timer(.1).timeout
 	
 
 	

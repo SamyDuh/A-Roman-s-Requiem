@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://i71jpxggjnuq"]
+[gd_scene load_steps=17 format=3 uid="uid://i71jpxggjnuq"]
 
 [ext_resource type="FontFile" uid="uid://deaoxf6dniini" path="res://Assets/Fonts/PrStart.ttf" id="1_16mra"]
 [ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_ppmil"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://7kb684m5lj5p" path="res://Assets/Sprites/HUD/blueparticle.png" id="8_pb73h"]
 [ext_resource type="Texture2D" uid="uid://l72ydxeil6jb" path="res://Assets/Sprites/HUD/flamelighting.png" id="9_eq4ck"]
 [ext_resource type="AudioStream" uid="uid://c6sy77106i3py" path="res://Sounds/crackling_fire.mp3" id="10_8fh8d"]
+[ext_resource type="PackedScene" uid="uid://s1sy053uadr2" path="res://Scenes/Menus/checkboxes.tscn" id="11_amfta"]
 
 [sub_resource type="Animation" id="Animation_o2smv"]
 resource_name = "flame_lighting_flicker"
@@ -210,5 +211,24 @@ stream = ExtResource("10_8fh8d")
 volume_db = -4.31
 autoplay = true
 
+[node name="DebugBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 233.0
+offset_right = 202.0
+offset_bottom = 351.0
+
+[node name="DialogueScene" type="Button" parent="DebugBox"]
+layout_mode = 2
+text = "Dialogue Scene"
+
+[node name="Menu Options" parent="." instance=ExtResource("11_amfta")]
+layout_mode = 0
+offset_left = 1688.0
+offset_top = -3.0
+offset_right = 1913.0
+offset_bottom = 249.0
+
 [connection signal="pressed" from="OptionsBox/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="OptionsBox/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="DebugBox/DialogueScene" to="." method="_on_dialogue_scene_pressed"]

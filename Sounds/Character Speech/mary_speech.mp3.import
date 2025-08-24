@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://breijw2q05dt"
+path="res://.godot/imported/mary_speech.mp3-6f6c61d296764e84d4788f5cf77b1d3a.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Character Speech/mary_speech.mp3"
+dest_files=["res://.godot/imported/mary_speech.mp3-6f6c61d296764e84d4788f5cf77b1d3a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

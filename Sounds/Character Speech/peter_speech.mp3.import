@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b60epsfxp6q81"
+path="res://.godot/imported/peter_speech.mp3-1de47bb28fbbb67daf81e6d8c7d51c3f.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Character Speech/peter_speech.mp3"
+dest_files=["res://.godot/imported/peter_speech.mp3-1de47bb28fbbb67daf81e6d8c7d51c3f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

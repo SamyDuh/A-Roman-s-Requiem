@@ -112,10 +112,10 @@ func slash():
 	animation_tree["parameters/conditions/slashing"] = true
 	rotation = rotation_angle
 	var saved_modifier = velocity_modifier
-	velocity += slash_direction * 200 * saved_modifier
+	velocity += slash_direction * 125 * saved_modifier + Vector2(0,-100)
 	await get_tree().create_timer(.4).timeout
 	rotation = 0
-	velocity -= slash_direction * 200 * saved_modifier
+	velocity -= slash_direction * 125 * saved_modifier - Vector2(0,-100)
 	if not enemy_hit:
 		velocity_modifier -= .2
 	else:
@@ -151,6 +151,7 @@ func check_slash_hitbox(delta):
 	var bodies_in_hitbox = $Sword/Hitbox.get_overlapping_bodies()
 	for body in bodies_in_hitbox:
 		if body.is_in_group("enemy"):
+			$"Sword Sound Effects/Hit Sound".pitch_scale = randf_range(.8,1.2)
 			$"Sword Sound Effects/Hit Sound".play()
 			body._death()
 			_enemy_hit()
@@ -183,6 +184,8 @@ func dash():
 
 func _enemy_hit():
 	velocity_modifier += .1
+	if velocity_modifier < .75:
+		velocity_modifier += .15
 	enemy_hit = true
 	$V_DeprecationTimer.start()
 
@@ -191,7 +194,7 @@ func _horizontal_movement():
 	velocity.x = horizontal_input * baseHorizontalSpeed
 
 func _vertical_movement(delta):
-	velocity.y = -baseVerticalSpeed * delta * 150 * velocity_modifier * tile_modifier
+	velocity.y = -baseVerticalSpeed * delta * 75 * velocity_modifier * tile_modifier -50 
 	
 func _take_damage():
 	if not inv_frames:
@@ -230,6 +233,7 @@ func _death():
 	shake_him = true
 	
 	level._death()
+	velocity_meter._death_bar()
 	cam._close_in_circle()
 	
 	animation_tree["parameters/conditions/holding"] = true
@@ -254,3 +258,5 @@ func _update_z_index(a):
 	
 
 
+func _shift_audio_pitch():
+	$Footsteps.pitch_scale = randf_range(.8,1.2)

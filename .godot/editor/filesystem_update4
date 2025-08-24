@@ -4,10 +4,11 @@ res://Scenes/Shaders/circletransition.gdshader
 res://Scenes/Shaders/sepiafilter.gdshader
 res://Scenes/Characters/peter.tscn
 res://Scenes/level_1.tscn
-res://Scripts/pause_menu.tscn
-res://Scenes/Characters/dummy.tscn
-res://Scenes/Menus/velocity_meter.tscn
+res://Scenes/dialogue_screen.tscn
 res://Scenes/Menus/enemy_indicator.tscn
-res://Scenes/Characters/short_italian_grunt.tscn
-res://Scenes/Menus/death_sparks.tscn
+res://Scenes/Characters/grunt_brute.tscn
+res://Scenes/Menus/checkboxes.tscn
+res://Scripts/pause_menu.tscn
 res://Scripts/peter.gd
+res://Scenes/Menus/velocity_meter.tscn
+res://Scripts/velocity_meter.gd

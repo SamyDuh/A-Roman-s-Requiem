@@ -871,6 +871,23 @@ tracks/8/keys = {
 "times": PackedFloat32Array(0, 0.3)
 }
 tracks/8/use_blend = true
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"_shift_audio_pitch"
+}, {
+"args": [],
+"method": &"_shift_audio_pitch"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_kvpp3"]
 resource_name = "slash"
@@ -1623,8 +1640,7 @@ vframes = 4
 
 [node name="Sword" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(-24, -3)
-rotation = -3.92699
+position = Vector2(1, -2)
 texture = ExtResource("5_kkh2e")
 flip_v = true
 vframes = 2
@@ -1634,7 +1650,6 @@ visible = false
 position = Vector2(0, 20)
 texture = ExtResource("6_7db0d")
 flip_h = true
-flip_v = true
 vframes = 9
 frame = 8
 
@@ -1649,12 +1664,11 @@ rotation = -0.785398
 shape = SubResource("RectangleShape2D_ufu0u")
 
 [node name="Left Arm" type="Sprite2D" parent="."]
-z_index = 2
 texture = ExtResource("4_s80w4")
 vframes = 6
-frame = 5
 
 [node name="Left Hand" type="Sprite2D" parent="Left Arm"]
+visible = false
 texture = ExtResource("5_v2ks0")
 vframes = 3
 frame = 2
@@ -1678,7 +1692,6 @@ modulate = Color(1, 1, 1, 0.584314)
 z_index = 5
 texture = ExtResource("10_mq0qf")
 vframes = 4
-frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

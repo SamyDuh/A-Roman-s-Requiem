@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://s1sy053uadr2"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/checkboxes.gd" id="1_34jcf"]
+[ext_resource type="Texture2D" uid="uid://bhmwgjeaxghvv" path="res://Assets/Sprites/HUD/musicicon.png" id="1_yuvdu"]
+[ext_resource type="Texture2D" uid="uid://cfgaex61i8wn7" path="res://Assets/Sprites/HUD/checkbox.png" id="2_io1j0"]
+[ext_resource type="Texture2D" uid="uid://c6lk3oiscgrdh" path="res://Assets/Sprites/HUD/checkedcheckbox.png" id="4_ixvm8"]
+[ext_resource type="Texture2D" uid="uid://b2nph8a53fvqf" path="res://Assets/Sprites/HUD/fullscreenicon.png" id="4_qst8t"]
+
+[node name="Menu Options" type="VBoxContainer"]
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 242.0
+offset_bottom = 252.0
+script = ExtResource("1_34jcf")
+
+[node name="Music Icon" type="Sprite2D" parent="."]
+position = Vector2(68, 71)
+scale = Vector2(4, 4)
+texture = ExtResource("1_yuvdu")
+
+[node name="Checkbox" type="TextureButton" parent="Music Icon"]
+offset_left = 11.25
+offset_top = -10.25
+offset_right = 31.25
+offset_bottom = 9.75
+toggle_mode = true
+texture_normal = ExtResource("2_io1j0")
+texture_pressed = ExtResource("4_ixvm8")
+
+[node name="Fullscreen Icon" type="Sprite2D" parent="."]
+position = Vector2(68, 166)
+scale = Vector2(4, 4)
+texture = ExtResource("4_qst8t")
+
+[node name="Checkbox" type="TextureButton" parent="Fullscreen Icon"]
+offset_left = 11.25
+offset_top = -9.75
+offset_right = 31.25
+offset_bottom = 10.25
+toggle_mode = true
+texture_normal = ExtResource("2_io1j0")
+texture_pressed = ExtResource("4_ixvm8")

@@ -13,6 +13,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if !Global.musicOn:
+		BGM.volume_db = -100
+	else:
+		BGM.volume_db = 0.0
 	pass
 
 func _start_bgm():

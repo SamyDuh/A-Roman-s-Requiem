@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://tococwpustyt"]
+[gd_scene load_steps=8 format=3 uid="uid://tococwpustyt"]
 
 [ext_resource type="Script" path="res://Scripts/velocity_meter.gd" id="1_fpq2l"]
 [ext_resource type="Texture2D" uid="uid://csybxyq0o2m1k" path="res://Assets/Sprites/HUD/velocitymeterbig.png" id="2_nsodw"]
+[ext_resource type="Texture2D" uid="uid://b0y07gjrqpxxt" path="res://Assets/Sprites/HUD/velocitymetercrack.png" id="3_xe52c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rwta"]
 bg_color = Color(0.270487, 0.73233, 1, 1)
@@ -27,6 +28,7 @@ offset_right = 94.0
 offset_bottom = 11.0
 theme = SubResource("Theme_0ufvc")
 max_value = 3.0
+show_percentage = false
 
 [node name="Meter" type="Sprite2D" parent="."]
 position = Vector2(-5.99999, 10)
@@ -34,3 +36,11 @@ scale = Vector2(0.866667, 0.866667)
 texture = ExtResource("2_nsodw")
 flip_h = true
 flip_v = true
+
+[node name="Crack" type="Sprite2D" parent="Meter"]
+visible = false
+z_index = 12
+z_as_relative = false
+position = Vector2(-1.13341e-05, 1.19209e-07)
+rotation = 3.14159
+texture = ExtResource("3_xe52c")

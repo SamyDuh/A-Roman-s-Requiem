@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://d26ncppdio44"]
+
+[ext_resource type="Texture2D" uid="uid://cbu6gs73sm3pc" path="res://Assets/Sprites/Character Spritesheets/Grunt Brute/gruntbrute.png" id="1_xi6sk"]
+[ext_resource type="Texture2D" uid="uid://fe2lyk0phb5a" path="res://Assets/Sprites/Character Spritesheets/tassel.png" id="2_4gcvu"]
+
+[sub_resource type="Animation" id="Animation_a1cew"]
+resource_name = "Walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hh5xo"]
+_data = {
+"Walk": SubResource("Animation_a1cew")
+}
+
+[sub_resource type="Animation" id="Animation_5wndu"]
+resource_name = "tassel"
+length = 0.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/Tassel:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_scbp4"]
+_data = {
+"tassel": SubResource("Animation_5wndu")
+}
+
+[node name="grunt_brute" type="CharacterBody2D"]
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("1_xi6sk")
+hframes = 2
+frame = 1
+
+[node name="Tassel" type="Sprite2D" parent="Body"]
+position = Vector2(0, -27)
+texture = ExtResource("2_4gcvu")
+vframes = 3
+
+[node name="BodyPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hh5xo")
+}
+
+[node name="TasselPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_scbp4")
+}
