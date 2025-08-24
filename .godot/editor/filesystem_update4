@@ -12,3 +12,5 @@ res://Scripts/pause_menu.tscn
 res://Scripts/peter.gd
 res://Scenes/Menus/velocity_meter.tscn
 res://Scripts/velocity_meter.gd
+res://Scripts/Characters/grunt_brute.gd
+res://Scenes/Characters/short_italian_grunt.tscn

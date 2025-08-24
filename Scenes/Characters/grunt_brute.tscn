@@ -1,7 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d26ncppdio44"]
+[gd_scene load_steps=10 format=3 uid="uid://d26ncppdio44"]
 
+[ext_resource type="Script" path="res://Scripts/Characters/grunt_brute.gd" id="1_dyalj"]
 [ext_resource type="Texture2D" uid="uid://cbu6gs73sm3pc" path="res://Assets/Sprites/Character Spritesheets/Grunt Brute/gruntbrute.png" id="1_xi6sk"]
 [ext_resource type="Texture2D" uid="uid://fe2lyk0phb5a" path="res://Assets/Sprites/Character Spritesheets/tassel.png" id="2_4gcvu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jupw"]
+size = Vector2(42, 45)
 
 [sub_resource type="Animation" id="Animation_a1cew"]
 resource_name = "Walk"
@@ -47,12 +51,21 @@ _data = {
 "tassel": SubResource("Animation_5wndu")
 }
 
-[node name="grunt_brute" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j61jp"]
+size = Vector2(24, 25)
+
+[node name="grunt_brute" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_dyalj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6.5)
+shape = SubResource("RectangleShape2D_1jupw")
 
 [node name="Body" type="Sprite2D" parent="."]
 texture = ExtResource("1_xi6sk")
 hframes = 2
-frame = 1
 
 [node name="Tassel" type="Sprite2D" parent="Body"]
 position = Vector2(0, -27)
@@ -68,3 +81,12 @@ libraries = {
 libraries = {
 "": SubResource("AnimationLibrary_scbp4")
 }
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+z_index = 1
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_j61jp")

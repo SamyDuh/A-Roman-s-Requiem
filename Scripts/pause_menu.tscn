@@ -56,10 +56,11 @@ centered = false
 [node name="Menu Options" parent="." instance=ExtResource("4_uk1ba")]
 z_index = 11
 layout_mode = 0
-offset_left = 1053.0
-offset_top = 22.0
-offset_right = 1288.0
-offset_bottom = 272.0
+offset_left = 1088.0
+offset_top = -2.0
+offset_right = 1323.0
+offset_bottom = 248.0
+scale = Vector2(0.75, 0.75)
 
 [connection signal="pressed" from="Options/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Options/ReturnButton" to="." method="_on_return_button_pressed"]

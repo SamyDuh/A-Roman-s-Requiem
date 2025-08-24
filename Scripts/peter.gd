@@ -151,10 +151,16 @@ func check_slash_hitbox(delta):
 	var bodies_in_hitbox = $Sword/Hitbox.get_overlapping_bodies()
 	for body in bodies_in_hitbox:
 		if body.is_in_group("enemy"):
-			$"Sword Sound Effects/Hit Sound".pitch_scale = randf_range(.8,1.2)
-			$"Sword Sound Effects/Hit Sound".play()
 			body._death()
-			_enemy_hit()
+			if body.dead:
+				_enemy_hit()
+				$"Sword Sound Effects/Hit Sound".pitch_scale = randf_range(.8,1.2)
+			else:
+				$"Sword Sound Effects/Hit Sound".pitch_scale = .2
+			
+			$"Sword Sound Effects/Hit Sound".play()
+			
+			
 			
 			
 func dash():

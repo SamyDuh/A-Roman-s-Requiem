@@ -1,6 +1,7 @@
+CollisionShape2D
+Area2D
 Sprite2D
 TextureButton
-CollisionShape2D
 CheckBox
 Button
 VBoxContainer
@@ -11,4 +12,3 @@ ColorRect
 Label
 MarginContainer
 AudioStreamPlayer2D
-Area2D

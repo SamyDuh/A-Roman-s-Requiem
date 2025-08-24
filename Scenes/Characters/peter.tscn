@@ -1638,7 +1638,7 @@ z_index = 3
 texture = ExtResource("3_0qt38")
 vframes = 4
 
-[node name="Sword" type="Sprite2D" parent="."]
+[node name="Sword" type="Sprite2D" parent="." groups=["sword"]]
 z_index = 2
 position = Vector2(1, -2)
 texture = ExtResource("5_kkh2e")

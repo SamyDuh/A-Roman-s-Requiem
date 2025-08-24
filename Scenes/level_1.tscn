@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bhj0gi4d0loc5"]
+[gd_scene load_steps=29 format=3 uid="uid://bhj0gi4d0loc5"]
 
 [ext_resource type="PackedScene" uid="uid://damf4bmsex3h" path="res://Scenes/Characters/peter.tscn" id="1_6a6s7"]
 [ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_57xan"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://b168p83ymoygy" path="res://Assets/Sprites/Level Elements/whispyclouds1.png" id="13_0qdmo"]
 [ext_resource type="Script" path="res://Scenes/Level Elements/clouds.gd" id="14_wdjky"]
 [ext_resource type="AudioStream" uid="uid://dbs665v14tc68" path="res://Music/game_over_theme.mp3" id="15_gdxip"]
+[ext_resource type="PackedScene" uid="uid://d26ncppdio44" path="res://Scenes/Characters/grunt_brute.tscn" id="19_j4ln8"]
 
 [sub_resource type="Animation" id="Animation_57j8r"]
 resource_name = "godspeedtext"
@@ -179,9 +180,9 @@ z_index = 10
 anchors_preset = -1
 anchor_bottom = 0.0
 offset_left = -311.0
-offset_top = -180.0
-offset_right = 949.0
-offset_bottom = 540.0
+offset_top = -179.0
+offset_right = 931.0
+offset_bottom = 539.0
 scale = Vector2(0.5, 0.5)
 size_flags_horizontal = 4
 
@@ -400,5 +401,17 @@ position = Vector2(331, -501)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_0qdmo")
 script = ExtResource("14_wdjky")
+
+[node name="grunt_brute4" parent="." instance=ExtResource("19_j4ln8")]
+position = Vector2(627, -28)
+
+[node name="grunt_brute3" parent="." instance=ExtResource("19_j4ln8")]
+position = Vector2(656, -915)
+
+[node name="grunt_brute2" parent="." instance=ExtResource("19_j4ln8")]
+position = Vector2(487, -1311)
+
+[node name="grunt_brute" parent="." instance=ExtResource("19_j4ln8")]
+position = Vector2(487.801, -991.658)
 
 [connection signal="timeout" from="Camera/Timer" to="Camera" method="_on_timer_timeout"]
