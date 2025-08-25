@@ -1,0 +1,198 @@
+[gd_scene load_steps=4 format=3 uid="uid://cml0vlpe3hkdi"]
+
+[ext_resource type="Script" path="res://Scripts/Elements/finish_line.gd" id="1_73lvl"]
+[ext_resource type="Texture2D" uid="uid://bqe20rpxkl5f1" path="res://Assets/Sprites/Level Elements/endcheckerboard.png" id="1_k8jjl"]
+[ext_resource type="Script" path="res://Scripts/Elements/CheckPattern.gd" id="2_lgk5m"]
+
+[node name="Finish Line" type="Node2D"]
+position = Vector2(-186, 5)
+script = ExtResource("1_73lvl")
+
+[node name="CheckPattern" type="Sprite2D" parent="." groups=["check_pattern"]]
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+
+[node name="CheckPattern2" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(12, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 2
+
+[node name="CheckPattern3" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(24, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 3
+
+[node name="CheckPattern4" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(36, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 4
+
+[node name="CheckPattern5" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(48, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 5
+
+[node name="CheckPattern6" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(60, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 6
+
+[node name="CheckPattern7" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(72, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 7
+
+[node name="CheckPattern8" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(84, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 8
+
+[node name="CheckPattern9" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(96, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 9
+
+[node name="CheckPattern10" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(108, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 10
+
+[node name="CheckPattern11" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(120, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 11
+
+[node name="CheckPattern12" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(132, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 12
+
+[node name="CheckPattern13" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(144, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 13
+
+[node name="CheckPattern14" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(156, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 14
+
+[node name="CheckPattern15" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(168, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 15
+
+[node name="CheckPattern16" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(180, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 16
+
+[node name="CheckPattern17" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(192, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 17
+
+[node name="CheckPattern18" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(204, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 18
+
+[node name="CheckPattern19" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(216, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 19
+
+[node name="CheckPattern20" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(228, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 20
+
+[node name="CheckPattern21" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(240, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 21
+
+[node name="CheckPattern22" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(252, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 22
+
+[node name="CheckPattern23" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(264, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 23
+
+[node name="CheckPattern24" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(276, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 24
+
+[node name="CheckPattern25" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(288, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 25
+
+[node name="CheckPattern26" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(300, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 26
+
+[node name="CheckPattern27" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(312, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 27
+
+[node name="CheckPattern28" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(324, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 28
+
+[node name="CheckPattern29" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(336, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 29
+
+[node name="CheckPattern30" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(348, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 30
+
+[node name="CheckPattern31" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(360, 0)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")
+checkValue = 31
+
+[node name="CheckPattern32" type="Sprite2D" parent="." groups=["check_pattern"]]
+position = Vector2(372, -12)
+texture = ExtResource("1_k8jjl")
+script = ExtResource("2_lgk5m")

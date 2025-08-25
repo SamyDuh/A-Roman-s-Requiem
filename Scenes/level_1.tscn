@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bhj0gi4d0loc5"]
+[gd_scene load_steps=30 format=3 uid="uid://bhj0gi4d0loc5"]
 
 [ext_resource type="PackedScene" uid="uid://damf4bmsex3h" path="res://Scenes/Characters/peter.tscn" id="1_6a6s7"]
 [ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_57xan"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://Scenes/Level Elements/clouds.gd" id="14_wdjky"]
 [ext_resource type="AudioStream" uid="uid://dbs665v14tc68" path="res://Music/game_over_theme.mp3" id="15_gdxip"]
 [ext_resource type="PackedScene" uid="uid://d26ncppdio44" path="res://Scenes/Characters/grunt_brute.tscn" id="19_j4ln8"]
+[ext_resource type="PackedScene" uid="uid://cml0vlpe3hkdi" path="res://Scripts/Elements/finish_line.tscn" id="20_534x0"]
 
 [sub_resource type="Animation" id="Animation_57j8r"]
 resource_name = "godspeedtext"
@@ -413,5 +414,8 @@ position = Vector2(487, -1311)
 
 [node name="grunt_brute" parent="." instance=ExtResource("19_j4ln8")]
 position = Vector2(487.801, -991.658)
+
+[node name="Finish Line" parent="." instance=ExtResource("20_534x0")]
+position = Vector2(413, 112)
 
 [connection signal="timeout" from="Camera/Timer" to="Camera" method="_on_timer_timeout"]
