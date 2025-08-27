@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bhj0gi4d0loc5"]
+[gd_scene load_steps=31 format=3 uid="uid://bhj0gi4d0loc5"]
 
 [ext_resource type="PackedScene" uid="uid://damf4bmsex3h" path="res://Scenes/Characters/peter.tscn" id="1_6a6s7"]
 [ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_57xan"]
@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://dbs665v14tc68" path="res://Music/game_over_theme.mp3" id="15_gdxip"]
 [ext_resource type="PackedScene" uid="uid://d26ncppdio44" path="res://Scenes/Characters/grunt_brute.tscn" id="19_j4ln8"]
 [ext_resource type="PackedScene" uid="uid://cml0vlpe3hkdi" path="res://Scripts/Elements/finish_line.tscn" id="20_534x0"]
+[ext_resource type="PackedScene" uid="uid://b1bgtbeixkpmh" path="res://Scenes/Characters/long_italian_grunt.tscn" id="21_3vfc8"]
 
 [sub_resource type="Animation" id="Animation_57j8r"]
 resource_name = "godspeedtext"
@@ -380,9 +381,6 @@ position = Vector2(495, -173)
 [node name="short_italian_grunt5" parent="." instance=ExtResource("12_1df1y")]
 position = Vector2(490, -794)
 
-[node name="short_italian_grunt4" parent="." instance=ExtResource("12_1df1y")]
-position = Vector2(539, -549)
-
 [node name="short_italian_grunt3" parent="." instance=ExtResource("12_1df1y")]
 position = Vector2(767, -370)
 
@@ -402,20 +400,33 @@ position = Vector2(331, -501)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("13_0qdmo")
 script = ExtResource("14_wdjky")
+metadata/_edit_lock_ = true
 
 [node name="grunt_brute4" parent="." instance=ExtResource("19_j4ln8")]
-position = Vector2(627, -28)
+position = Vector2(678, -2466)
 
 [node name="grunt_brute3" parent="." instance=ExtResource("19_j4ln8")]
-position = Vector2(656, -915)
+position = Vector2(679, -2043)
 
 [node name="grunt_brute2" parent="." instance=ExtResource("19_j4ln8")]
-position = Vector2(487, -1311)
+position = Vector2(514, -1749)
 
 [node name="grunt_brute" parent="." instance=ExtResource("19_j4ln8")]
-position = Vector2(487.801, -991.658)
+position = Vector2(667, -1138)
 
 [node name="Finish Line" parent="." instance=ExtResource("20_534x0")]
-position = Vector2(413, 112)
+position = Vector2(367, -2606)
+
+[node name="long_italian_grunt" parent="." instance=ExtResource("21_3vfc8")]
+position = Vector2(552, -531)
+
+[node name="long_italian_grunt2" parent="." instance=ExtResource("21_3vfc8")]
+position = Vector2(644, -977)
+
+[node name="long_italian_grunt3" parent="." instance=ExtResource("21_3vfc8")]
+position = Vector2(482, -1483)
+
+[node name="long_italian_grunt4" parent="." instance=ExtResource("21_3vfc8")]
+position = Vector2(462, -2187)
 
 [connection signal="timeout" from="Camera/Timer" to="Camera" method="_on_timer_timeout"]

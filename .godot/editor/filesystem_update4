@@ -1,7 +1,9 @@
-res://Scenes/title_screen.tscn
+res://Scripts/Elements/finish_line.tscn
 res://Scripts/level1camera.gd
 res://Scenes/Shaders/circletransition.gdshader
 res://Scenes/Shaders/sepiafilter.gdshader
+res://Scripts/Characters/grunt_brute.gd
+res://Scenes/title_screen.tscn
 res://Scenes/Characters/peter.tscn
 res://Scenes/level_1.tscn
 res://Scenes/Menus/velocity_meter.tscn
@@ -9,7 +11,9 @@ res://Scenes/dialogue_screen.tscn
 res://Scenes/Menus/enemy_indicator.tscn
 res://Scenes/Characters/grunt_brute.tscn
 res://Scenes/Characters/short_italian_grunt.tscn
-res://Scripts/Elements/finish_line.tscn
 res://Scripts/Elements/CheckPattern.gd
-res://Scripts/peter.gd
 res://Scripts/Elements/finish_line.gd
+res://Scenes/Menus/checkboxes.tscn
+res://Scripts/peter.gd
+res://Scenes/Characters/long_italian_grunt.tscn
+res://Scripts/Characters/long_italian_grunt.gd

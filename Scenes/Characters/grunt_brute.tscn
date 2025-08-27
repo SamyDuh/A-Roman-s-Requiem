@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://fe2lyk0phb5a" path="res://Assets/Sprites/Character Spritesheets/tassel.png" id="2_4gcvu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jupw"]
-size = Vector2(42, 45)
+size = Vector2(40, 50)
 
 [sub_resource type="Animation" id="Animation_a1cew"]
 resource_name = "Walk"
@@ -60,7 +60,6 @@ collision_mask = 0
 script = ExtResource("1_dyalj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_1jupw")
 
 [node name="Body" type="Sprite2D" parent="."]
@@ -83,6 +82,7 @@ libraries = {
 }
 
 [node name="Hitbox" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 3
 

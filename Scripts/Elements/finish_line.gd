@@ -5,7 +5,7 @@ extends Node2D
 func _ready():
 	for child in self.get_children():
 		if child.is_in_group("check_pattern"):
-			child._start_wave()
+			child.start_wave()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

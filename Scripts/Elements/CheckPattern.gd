@@ -1,34 +1,24 @@
 extends Sprite2D
 
-# represents order of check pattern (starts at 1)
-@export var checkValue : int = 1
+@export var checkValue: int = 1
+@export var distance: float = 10.0
 
-@onready var isWaving = false
-	
+var base_pos: Vector2
+
 func _ready():
-	pass
-	
-func _start_wave():
+	base_pos = position
+
+func start_wave():
+	# waits sometime depending on checkValue, helps create delay that causes wave effect
 	await get_tree().create_timer(checkValue * .1).timeout
-	isWaving = true
-	_process_wave()
 
-func _process_wave():
-	
-	
-	while isWaving:
-		var down_tween = create_tween()
-		var up_tween = create_tween()
-		var return_tween = create_tween()
-		down_tween.tween_property(self,"position:y",-10, .2)
-		await down_tween.finished
-		up_tween.tween_property(self, "position:y",20, .4)
-		await up_tween.finished
-		return_tween.tween_property(self,"position:y",-10, .2)
-		await return_tween.finished
+	var wave_tween = create_tween()
+	wave_tween.set_loops()
+	wave_tween.set_trans(Tween.TRANS_SINE)
+	wave_tween.set_ease(Tween.EASE_IN_OUT)
 
-	
+	wave_tween.tween_property(self, "position", base_pos + Vector2(0, -distance), 1)
+	wave_tween.tween_property(self, "position", base_pos + Vector2(0,  distance), 2)
+	wave_tween.tween_property(self, "position", base_pos, 1)
 
-	
-	
-	
+

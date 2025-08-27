@@ -176,9 +176,9 @@ func dash():
 		
 	else:
 		animation_tree["parameters/conditions/dashing_left"] = true
-		velocity.x -= 250
+		velocity.x -= 300
 		await get_tree().create_timer(.35).timeout
-		velocity.x += 250
+		velocity.x += 300
 		animation_tree["parameters/conditions/dashing_left"] = false
 		
 		if not enemy_hit:
@@ -197,10 +197,10 @@ func _enemy_hit():
 
 func _horizontal_movement():
 	var horizontal_input = Input.get_axis("left","right")
-	velocity.x = horizontal_input * baseHorizontalSpeed
+	velocity.x = horizontal_input * baseHorizontalSpeed * tile_modifier
 
 func _vertical_movement(delta):
-	velocity.y = -baseVerticalSpeed * delta * 75 * velocity_modifier * tile_modifier -50 
+	velocity.y = -baseVerticalSpeed * velocity_modifier * tile_modifier -50 
 	
 func _take_damage():
 	if not inv_frames:
