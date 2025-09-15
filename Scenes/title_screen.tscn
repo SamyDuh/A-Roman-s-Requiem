@@ -212,6 +212,7 @@ volume_db = -4.31
 autoplay = true
 
 [node name="DebugBox" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 71.0
 offset_top = 233.0

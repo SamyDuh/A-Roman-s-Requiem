@@ -2,11 +2,17 @@ extends Node2D
 
 @onready var BGM = $Camera/BGM
 
+@onready var LevelPlayer = $Camera/LevelPlayer
+@onready var SecondaryLevelPlayer = $Camera/SecondaryLevelPlayer
+
 var OverworldBGM: AudioStream = load("res://Music/level_1_theme.mp3")
 var DeathBGM: AudioStream = load("res://Music/game_over_theme.mp3")
 var RevivalSFX: AudioStream = load("res://Sounds/thunder_strike.mp3")
 
+var RainSFX: AudioStream = load("res://Sounds/rain.mp3")
+
 func _ready():
+	
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 
 # Called when the node enters the scene tree for the first time.
@@ -35,3 +41,30 @@ func _revival():
 	RevivalSFX.loop = false
 	BGM.set_stream(RevivalSFX)
 	BGM.play()
+
+
+
+
+
+func _on_rain_checkpoint_body_entered(body):
+	if body.name == "Peter":
+		$Camera/Flash.color.a = 0
+		$Camera/Flash.visible = true
+		
+		SecondaryLevelPlayer.set_stream(RevivalSFX)
+		SecondaryLevelPlayer.play()
+		
+		var flash_tween = create_tween()
+		flash_tween.tween_property($Camera/Flash,"color:a",1, .2)
+		
+		await flash_tween.finished
+		$Camera/Flash.visible = false
+		
+		
+		RainSFX.loop = true
+		LevelPlayer.set_stream(RainSFX)
+		LevelPlayer.play()
+		
+		
+		$Camera/CloudCover.visible = true
+	pass # Replace with function body.

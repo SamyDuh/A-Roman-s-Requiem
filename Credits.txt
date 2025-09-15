@@ -4,3 +4,6 @@ https://www.1001freefonts.com/chocolate-box.font
 
 Circle Transition - agurkas:
 https://godotshaders.com/shader/simple-circle-transition-2/
+
+Rain Shader - mo32167:
+https://godotshaders.com/shader/simple-rain-snow-shader/

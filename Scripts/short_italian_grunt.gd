@@ -3,6 +3,11 @@ extends CharacterBody2D
 @export var enemy_indicator = preload("res://Scenes/Menus/enemy_indicator.tscn")
 @export var death_sparks = preload("res://Scenes/Menus/death_sparks.tscn")
 
+@export var points_worth = 100
+
+
+@export var pushModifier = 400
+
 @onready var animation_player = $AnimationPlayer
 @onready var dead = false
 @onready var within_distance = false
@@ -15,6 +20,7 @@ extends CharacterBody2D
 @onready var indicator_freed = false
 
 func _ready():
+	await get_tree().create_timer(randf_range(0,1.0)).timeout
 	animation_player.play("running",-1,.85)
 	pass
 
@@ -40,6 +46,9 @@ func _physics_process(delta):
 		elif ((distance_to_camera < 90 || distance_to_camera == 0) && !indicator_freed):
 			indicator_instance.queue_free()
 			indicator_freed = true
+	
+	if dead:
+		move_and_slide()
 
 func create_enemy_indicator():
 	if dead:
@@ -63,8 +72,24 @@ func create_enemy_indicator():
 func _death():
 	if not dead:
 		dead = true
+		
+		var points_popup_scene = preload("res://Scripts/Elements/points.tscn")
+		var points_popup = points_popup_scene.instantiate()
+		get_tree().current_scene.add_child(points_popup)
+		points_popup._set_points(points_worth,Vector2(position.x + 40, position.y))
+		
+		get_parent().get_node("Camera/points_counter")._change_points(points_worth)
+		
+		
 		sparks_instance = death_sparks.instantiate()
 		self.add_child(sparks_instance)
 		sparks_instance.get_node("fire").emitting = true
 		$CollisionShape2D.disabled = true
 		animation_player.play("death")
+		
+		var direction_from_player = self.position - player.position
+	
+		velocity = direction_from_player.normalized() * pushModifier
+		self.rotation = direction_from_player.angle() + 90
+		await get_tree().create_timer(.2).timeout
+		velocity = Vector2(0,0)

@@ -109,6 +109,10 @@ func slash():
 		invalid_slash = false
 		return 0
 	slashing = true
+	
+	_shift_audio_pitch($"Sword Sound Effects/Woosh Sound")
+	$"Sword Sound Effects/Woosh Sound".play()
+	
 	animation_tree["parameters/conditions/slashing"] = true
 	rotation = rotation_angle
 	var saved_modifier = velocity_modifier
@@ -166,6 +170,10 @@ func check_slash_hitbox(delta):
 func dash():
 	if holding:
 		return 0
+		
+	_shift_audio_pitch($"Side Woosh Sound")
+	$"Side Woosh Sound".play()
+	
 	slashing = true
 	if velocity.x > 0:
 		animation_tree["parameters/conditions/dashing_right"] = true
@@ -206,8 +214,9 @@ func _take_damage():
 	if not inv_frames:
 		inv_frames = true
 		_invincibility_window()
+		_shift_audio_pitch($"Take Damage")
 		$"Take Damage".play()
-		velocity_modifier -= .2
+		velocity_modifier -= .6
 		
 func _invincibility_window():
 	_modulate_peter(1,0,0,.9)
@@ -264,5 +273,5 @@ func _update_z_index(a):
 	
 
 
-func _shift_audio_pitch():
-	$Footsteps.pitch_scale = randf_range(.8,1.2)
+func _shift_audio_pitch(location):
+	location.pitch_scale = randf_range(.8,1.2)

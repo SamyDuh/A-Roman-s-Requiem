@@ -9,9 +9,12 @@ extends CharacterBody2D
 @onready var distance_to_camera
 @onready var camera = get_parent().get_node("Camera")
 
+
 @onready var indicator_instance = null
 @onready var sparks_instance = null
 @onready var indicator_freed = false
+
+@export var points_worth = 20
 
 func _ready():
 	pass
@@ -48,6 +51,13 @@ func create_enemy_indicator():
 func _death():
 	if not dead:
 		dead = true
+		
+		var points_popup_scene = preload("res://Scripts/Elements/points.tscn")
+		var points_popup = points_popup_scene.instantiate()
+		get_tree().current_scene.add_child(points_popup)
+		points_popup._set_points(points_worth,Vector2(position.x + 50, position.y))
+		get_parent().get_node("Camera/points_counter")._change_points(points_worth)
+		
 		sparks_instance = death_sparks.instantiate()
 		self.add_child(sparks_instance)
 		sparks_instance.get_node("fire").modulate = Color(1,0,0)
