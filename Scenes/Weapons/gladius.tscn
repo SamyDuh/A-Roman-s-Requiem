@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b45roctt5cc5w"]
+
+[ext_resource type="Texture2D" uid="uid://c5u2ys3n68mlr" path="res://Assets/Sprites/Weapons/gladius.png" id="1_g5a1x"]
+[ext_resource type="Script" uid="uid://cwt2r0s5nye7p" path="res://Scripts/Weapons/gladius.gd" id="1_jk3on"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jk3on"]
+size = Vector2(4, 35)
+
+[node name="Gladius" type="Node2D"]
+z_index = 1
+z_as_relative = false
+script = ExtResource("1_jk3on")
+HANDLE_POSITION_MAIN = 9
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="Hitbox"]
+z_index = 1
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_jk3on")
+
+[node name="Weapon" type="Sprite2D" parent="."]
+texture = ExtResource("1_g5a1x")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcuwv1g3bhm7a"]
+
+[ext_resource type="Texture2D" uid="uid://58sj85ajokub" path="res://Assets/Sprites/Weapons/pilum.png" id="1_j7nck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jk3on"]
+size = Vector2(8, 28.5)
+
+[node name="Pilum" type="Node2D"]
+z_as_relative = false
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="Hitbox"]
+z_index = 1
+position = Vector2(0, 29.25)
+shape = SubResource("RectangleShape2D_jk3on")
+
+[node name="Weapon" type="Sprite2D" parent="."]
+texture = ExtResource("1_j7nck")

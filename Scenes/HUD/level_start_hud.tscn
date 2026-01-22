@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8jse1rh7wkoh"]
+
+[ext_resource type="Script" uid="uid://t4e10g3k21qt" path="res://Scripts/HUD/level_start_hud.gd" id="1_n3euh"]
+
+[node name="Level Start HUD" type="Node2D"]
+script = ExtResource("1_n3euh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -52.0
+offset_top = -12.0
+offset_right = 53.0
+offset_bottom = 11.0
+text = "press any key"
+horizontal_alignment = 1

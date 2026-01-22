@@ -1,14 +1,12 @@
-AudioStreamPlayer2D
-CollisionShape2D
 Area2D
-ColorRect
-Label
+CollisionShape2D
 Sprite2D
 AnimationPlayer
-Node2D
 CharacterBody2D
-TextureButton
-CheckBox
+AnimationTree
+TileMapLayer
+Label      - Matches the "text" keyword.
+Camera2D
 Button
 VBoxContainer
-AudioStreamPlayer
+ColorRect

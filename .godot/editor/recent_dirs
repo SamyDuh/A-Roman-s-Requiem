@@ -1,17 +1,10 @@
-res://Scenes/Shaders
-res://Scripts/Elements
-res://
-res://Scripts/Characters
+res://Scripts/Weapons
+res://Scripts/Autoloads
+res://Scenes/Weapons
 res://Scenes/Characters
-res://Scripts/Menus
-res://Scripts
+res://Scripts/Characters
+res://Assets/Sprites/Enemies/Grunt Long
+res://Scenes/Levels
+res://Scripts/HUD
+res://Scenes/HUD
 res://Scenes/Menus
-res://Assets/Sprites
-res://Assets/Sprites/Character Portraits
-res://Scenes
-res://Scenes/Level Elements
-res://Sounds
-res://Assets/Sprites/HUD
-res://Assets/Themes
-res://Assets/Tilesets
-res://Assets/Fonts
