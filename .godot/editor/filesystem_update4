@@ -1,8 +1,1 @@
 res://Scenes/Levels/demo.tscn
-res://Scripts/Weapons/human_weapon.gd
-res://Scenes/Characters/grunt_long.tscn
-res://Scripts/Characters/human_enemy.gd
-res://Scripts/Weapons/gladius.gd
-res://Scenes/Weapons/gladius.tscn
-res://Scripts/Weapons/pugio.gd
-res://Scenes/Weapons/pugio.tscn
