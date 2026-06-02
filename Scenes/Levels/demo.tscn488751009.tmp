@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dh0b1hl1ow0ux"]
+
+[ext_resource type="Script" uid="uid://3kgnjvkfo23h" path="res://Scripts/HUD/camera.gd" id="1_ypobl"]
+[ext_resource type="PackedScene" uid="uid://grv6cbjjwi0j" path="res://Scenes/Characters/grunt_long.tscn" id="4_o508y"]
+[ext_resource type="PackedScene" uid="uid://d3tppxco7p2q5" path="res://Scenes/Characters/new_peter.tscn" id="6_ypobl"]
+
+[node name="Demo" type="Node2D" unique_id=914243509]
+texture_filter = 1
+
+[node name="Frame" type="Camera2D" parent="." unique_id=208630066]
+zoom = Vector2(3, 3)
+process_callback = 0
+limit_enabled = false
+position_smoothing_speed = 30.0
+script = ExtResource("1_ypobl")
+VERTICAL_OFFSET = -100
+
+[node name="ColorRect" type="ColorRect" parent="Frame" unique_id=1420937917]
+z_index = -1
+offset_left = -328.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 248.0
+color = Color(0.972549, 0.7058824, 0.54509807, 1)
+
+[node name="Grunt Long" parent="." unique_id=1124321775 instance=ExtResource("4_o508y")]
+position = Vector2(-104, -472)
+WEAPON = "Pugio"
+
+[node name="Grunt Long2" parent="." unique_id=1586187501 instance=ExtResource("4_o508y")]
+position = Vector2(48, -720)
+
+[node name="NewPeter" parent="." unique_id=976818441 instance=ExtResource("6_ypobl")]
+position = Vector2(0, 16)
+rotation = 0.43633232

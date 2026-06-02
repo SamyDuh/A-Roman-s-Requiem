@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bcctk8leqn6l5"]
+[gd_scene format=3 uid="uid://bcctk8leqn6l5"]
 
 [ext_resource type="Script" uid="uid://seefluvcb2a4" path="res://Scripts/Characters/player.gd" id="1_gdgf0"]
 [ext_resource type="Texture2D" uid="uid://oca525x465bo" path="res://Assets/Sprites/Player/peterhead.png" id="1_khnq4"]
@@ -216,6 +216,45 @@ tracks/0/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_h1n2f"]
+resource_name = "Slash"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left Arm:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sword:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sword:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
 [sub_resource type="Animation" id="Animation_xccyk"]
 resource_name = "Unsheath"
 tracks/0/type = "value"
@@ -380,45 +419,6 @@ tracks/6/keys = {
 "values": [2]
 }
 
-[sub_resource type="Animation" id="Animation_h1n2f"]
-resource_name = "Slash"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Left Arm:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sword:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sword:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h1n2f"]
 _data = {
 &"Double Arm Swing": SubResource("Animation_01b8d"),
@@ -428,68 +428,62 @@ _data = {
 &"Unsheathed Arm Swing": SubResource("Animation_25bbb")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1732154447]
 script = ExtResource("1_gdgf0")
 
-[node name="Head" type="Sprite2D" parent="."]
+[node name="Head" type="Sprite2D" parent="." unique_id=2073101774]
 texture = ExtResource("1_khnq4")
 metadata/_edit_lock_ = true
 
-[node name="Body" type="Sprite2D" parent="."]
+[node name="Body" type="Sprite2D" parent="." unique_id=1763327611]
 texture_filter = 1
 texture = ExtResource("2_utp2y")
 vframes = 4
 metadata/_edit_lock_ = true
 
-[node name="Cape" type="Sprite2D" parent="."]
+[node name="Cape" type="Sprite2D" parent="." unique_id=1266334425]
 z_index = 1
 texture = ExtResource("3_gdgf0")
 vframes = 4
 
-[node name="Right Arm" type="Sprite2D" parent="."]
+[node name="Right Arm" type="Sprite2D" parent="." unique_id=1542071423]
 texture = ExtResource("4_xo8ps")
 vframes = 3
 
-[node name="Left Arm" type="Sprite2D" parent="."]
+[node name="Left Arm" type="Sprite2D" parent="." unique_id=1995463842]
 texture = ExtResource("5_fcmex")
 vframes = 6
 
-[node name="Left Hand" type="Sprite2D" parent="Left Arm"]
+[node name="Left Hand" type="Sprite2D" parent="Left Arm" unique_id=81820249]
 visible = false
 z_index = 2
 texture = ExtResource("6_utp2y")
 vframes = 3
 
-[node name="Sword" type="Sprite2D" parent="."]
+[node name="Sword" type="Sprite2D" parent="." unique_id=1880276113]
 position = Vector2(1, -1)
 texture = ExtResource("6_25bbb")
 flip_v = true
 
-[node name="Sword Flame" type="Sprite2D" parent="Sword"]
+[node name="Sword Flame" type="Sprite2D" parent="Sword" unique_id=1390161522]
 
-[node name="Hitbox" type="CollisionShape2D" parent="Sword"]
+[node name="Hitbox" type="CollisionShape2D" parent="Sword" unique_id=1395710539]
 visible = false
 position = Vector2(6.45343, 7.160528)
 rotation = -0.7853982
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_gdgf0")
 
-[node name="Hurtbox" type="CollisionShape2D" parent="."]
+[node name="Hurtbox" type="CollisionShape2D" parent="." unique_id=245823939]
 visible = false
 position = Vector2(2, 0)
 shape = SubResource("RectangleShape2D_cueqf")
 
-[node name="Cape Player" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_25bbb")
-}
+[node name="Cape Player" type="AnimationPlayer" parent="." unique_id=934356262]
+libraries/ = SubResource("AnimationLibrary_25bbb")
 
-[node name="Body Player" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_cueqf")
-}
+[node name="Body Player" type="AnimationPlayer" parent="." unique_id=1199547880]
+libraries/ = SubResource("AnimationLibrary_cueqf")
 
-[node name="Arms Player" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_h1n2f")
-}
+[node name="Arms Player" type="AnimationPlayer" parent="." unique_id=1176275517]
+libraries/ = SubResource("AnimationLibrary_h1n2f")

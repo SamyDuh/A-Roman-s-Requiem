@@ -8,11 +8,15 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="A Roman's Requiem Remastered"
 run/main_scene="uid://dh0b1hl1ow0ux"
-config/features=PackedStringArray("4.5", "Mobile")
+config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -25,6 +29,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/size/borderless=true
+window/stretch/mode="viewport"
 
 [input]
 
@@ -45,4 +50,3 @@ right={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
-2d/snap/snap_2d_transforms_to_pixel=true

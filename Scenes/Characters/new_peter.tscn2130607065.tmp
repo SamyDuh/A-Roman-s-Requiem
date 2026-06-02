@@ -1,0 +1,554 @@
+[gd_scene format=3 uid="uid://d3tppxco7p2q5"]
+
+[ext_resource type="Texture2D" uid="uid://dm7gcjloa30rt" path="res://Assets/Sprites/Peter/peter_head.png" id="1_5flbu"]
+[ext_resource type="Script" uid="uid://co6f33akt44lk" path="res://Scripts/Characters/Player/player_controller.gd" id="1_mccdp"]
+[ext_resource type="Texture2D" uid="uid://cerkao8jg3g3" path="res://Assets/Sprites/Peter/peter_cape.png" id="2_yytcw"]
+[ext_resource type="Texture2D" uid="uid://2ngyd7ax5cve" path="res://Assets/Sprites/Peter/peter_body.png" id="3_fldwc"]
+[ext_resource type="Texture2D" uid="uid://b38sft4mg4mpp" path="res://Assets/Sprites/Peter/peter_Larm.png" id="5_5flbu"]
+[ext_resource type="Texture2D" uid="uid://fiqf4o4nhpts" path="res://Assets/Sprites/Peter/peter_legs.png" id="5_g4ib7"]
+[ext_resource type="Texture2D" uid="uid://d3ayuwe3xjiqu" path="res://Assets/Sprites/Peter/peter_Lhand.png" id="5_m5shk"]
+[ext_resource type="Texture2D" uid="uid://dkvri6lxifx2t" path="res://Assets/Sprites/Peter/sword_of_the_spirit.png" id="6_m5shk"]
+[ext_resource type="Script" uid="uid://kv58b4g5ui0w" path="res://Scripts/Characters/Player/player_effects.gd" id="9_g4ib7"]
+[ext_resource type="Script" uid="uid://ctvucr2mpccnd" path="res://Scripts/Effects/fade_away.gd" id="10_g4ib7"]
+
+[sub_resource type="Animation" id="Animation_g4ib7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/RArm:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/LArm:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 1, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Legs:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 2, 0, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/LArm/Sword:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8, 8)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/LArm/Sword:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/LArm:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, -8)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/LArm:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/LArm/Sword:z_index")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/Cape:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_m5shk"]
+resource_name = "cape_wave"
+length = 0.33
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Cape:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_fldwc"]
+resource_name = "limbs_run"
+length = 0.25
+loop_mode = 2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/RArm:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/LArm:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 1, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Legs:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 2, 0, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/LArm/Sword:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8, 8)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/LArm/Sword:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/LArm:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, -10)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/LArm:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/LArm/Sword:z_index")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+
+[sub_resource type="Animation" id="Animation_mccdp"]
+resource_name = "sword_swing"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/LArm:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/LArm/Sword:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.9696159, 45.652702)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/LArm/Sword:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7853982]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/LArm/Sword:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/LArm:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.7453292519943295, 4.71238898038469, 4.71238898038469, 2.2689280275926285]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/LArm:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, -10)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/Cape:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/Legs:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m5shk"]
+_data = {
+&"RESET": SubResource("Animation_g4ib7"),
+&"cape_wave": SubResource("Animation_m5shk"),
+&"limbs_run": SubResource("Animation_fldwc"),
+&"sword_swing": SubResource("Animation_mccdp")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gyoxt"]
+animation = &"cape_wave"
+play_mode = 1
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_qls02"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l7nt1"]
+animation = &"limbs_run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kohhx"]
+animation = &"cape_wave"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1dnp3"]
+graph_offset = Vector2(-737.7259, -17.745438)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_kohhx")
+nodes/Animation/position = Vector2(-180, 40)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_l7nt1")
+"nodes/Animation 2/position" = Vector2(-180, 220)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_qls02")
+nodes/Add2/position = Vector2(20, 60)
+node_connections = [&"output", 0, &"Add2", &"Add2", 0, &"Animation", &"Add2", 1, &"Animation 2"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_fldwc"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_mccdp"]
+filter_enabled = true
+filters = ["", "Cape:frame", "Legs:frame", "RArm:frame"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g4ib7"]
+animation = &"cape_wave"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m5shk"]
+animation = &"limbs_run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qls02"]
+animation = &"sword_swing"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_l7nt1"]
+graph_offset = Vector2(-488.196, 30.824158)
+nodes/output/position = Vector2(480, 100)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_qls02")
+nodes/Animation/position = Vector2(-60, 0)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_g4ib7")
+"nodes/Animation 2/position" = Vector2(-140, 420)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_m5shk")
+"nodes/Animation 3/position" = Vector2(-280, 260)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_mccdp")
+nodes/Add2/position = Vector2(60, 220)
+"nodes/Add2 2/node" = SubResource("AnimationNodeAdd2_fldwc")
+"nodes/Add2 2/position" = Vector2(263.8722, -1.4256854)
+node_connections = [&"output", 0, &"Add2 2", &"Add2", 0, &"Animation 2", &"Add2", 1, &"Animation 3", &"Add2 2", 0, &"Animation", &"Add2 2", 1, &"Add2"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fldwc"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kohhx"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wy4bw"]
+allow_transition_to_self = true
+states/Start/position = Vector2(228, 100)
+"states/cape_wave 2/node" = SubResource("AnimationNodeAnimation_gyoxt")
+"states/cape_wave 2/position" = Vector2(714, -41)
+states/running/node = SubResource("AnimationNodeBlendTree_1dnp3")
+states/running/position = Vector2(568, 74)
+states/sword_swing/node = SubResource("AnimationNodeBlendTree_l7nt1")
+states/sword_swing/position = Vector2(441, -41)
+transitions = ["Start", "running", SubResource("AnimationNodeStateMachineTransition_fldwc"), "sword_swing", "running", SubResource("AnimationNodeStateMachineTransition_kohhx")]
+graph_offset = Vector2(82, -104)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mccdp"]
+blend_mode = 1
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_g4ib7"]
+viewport_path = NodePath("SubViewport")
+
+[node name="NewPeter" type="CharacterBody2D" unique_id=1901862403]
+script = ExtResource("1_mccdp")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=143334522]
+script = ExtResource("9_g4ib7")
+
+[node name="Cape" type="Sprite2D" parent="Visuals" unique_id=1116123747]
+z_index = 16
+texture = ExtResource("2_yytcw")
+hframes = 4
+frame = 3
+
+[node name="Head" type="Sprite2D" parent="Visuals" unique_id=697590216]
+z_index = 14
+texture = ExtResource("1_5flbu")
+
+[node name="Body" type="Sprite2D" parent="Visuals" unique_id=1985178095]
+z_index = 13
+texture = ExtResource("3_fldwc")
+
+[node name="LArm" type="Sprite2D" parent="Visuals" unique_id=2123306497]
+z_index = 12
+position = Vector2(-11, -8)
+texture = ExtResource("5_5flbu")
+centered = false
+offset = Vector2(-16, -19)
+hframes = 5
+frame = 2
+
+[node name="Sword" type="Sprite2D" parent="Visuals/LArm" unique_id=716444105]
+z_index = 14
+z_as_relative = false
+position = Vector2(8, 8)
+texture = ExtResource("6_m5shk")
+
+[node name="LHand" type="Sprite2D" parent="Visuals/LArm" unique_id=1928269092]
+visible = false
+texture = ExtResource("5_m5shk")
+
+[node name="RArm" type="Sprite2D" parent="Visuals" unique_id=957715141]
+z_index = 12
+texture = ExtResource("5_5flbu")
+flip_h = true
+hframes = 5
+
+[node name="Legs" type="Sprite2D" parent="Visuals" unique_id=1339564176]
+z_index = 11
+position = Vector2(0, -1)
+texture = ExtResource("5_g4ib7")
+hframes = 4
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Visuals" unique_id=241176136]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_m5shk")
+
+[node name="AnimationTree" type="AnimationTree" parent="Visuals" unique_id=1630365170]
+root_node = NodePath("../..")
+tree_root = SubResource("AnimationNodeStateMachine_wy4bw")
+anim_player = NodePath("../AnimationPlayer")
+parameters/running/Add2/add_amount = 1.0
+parameters/sword_swing/Add2/add_amount = 1.0
+"parameters/sword_swing/Add2 2/add_amount" = 1.0
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1328223863]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(150, 150)
+render_target_update_mode = 4
+
+[node name="Viewport Visuals" type="Node2D" parent="SubViewport" unique_id=479907593]
+position = Vector2(75, 75)
+
+[node name="Cape" type="Sprite2D" parent="SubViewport/Viewport Visuals" unique_id=2026535782]
+z_index = 16
+texture = ExtResource("2_yytcw")
+hframes = 4
+frame = 2
+
+[node name="Head" type="Sprite2D" parent="SubViewport/Viewport Visuals" unique_id=1551143762]
+z_index = 14
+texture = ExtResource("1_5flbu")
+
+[node name="Body" type="Sprite2D" parent="SubViewport/Viewport Visuals" unique_id=566440808]
+z_index = 13
+texture = ExtResource("3_fldwc")
+
+[node name="LArm" type="Sprite2D" parent="SubViewport/Viewport Visuals" unique_id=1186041953]
+z_index = 12
+position = Vector2(-13, -10)
+texture = ExtResource("5_5flbu")
+centered = false
+offset = Vector2(-16, -19)
+hframes = 5
+frame = 1
+
+[node name="Sword" type="Sprite2D" parent="SubViewport/Viewport Visuals/LArm" unique_id=1469908236]
+z_index = 14
+z_as_relative = false
+position = Vector2(8, 8)
+texture = ExtResource("6_m5shk")
+
+[node name="LHand" type="Sprite2D" parent="SubViewport/Viewport Visuals/LArm" unique_id=2068188861]
+visible = false
+texture = ExtResource("5_m5shk")
+
+[node name="RArm" type="Sprite2D" parent="SubViewport/Viewport Visuals" unique_id=1341213716]
+z_index = 12
+texture = ExtResource("5_5flbu")
+flip_h = true
+hframes = 5
+frame = 1
+
+[node name="Legs" type="Sprite2D" parent="SubViewport/Viewport Visuals" unique_id=2069476429]
+z_index = 11
+position = Vector2(0, -1)
+texture = ExtResource("5_g4ib7")
+hframes = 4
+
+[node name="SubOutput" type="Sprite2D" parent="." unique_id=736542793]
+visible = false
+z_index = 16
+material = SubResource("CanvasItemMaterial_mccdp")
+texture = SubResource("ViewportTexture_g4ib7")
+script = ExtResource("10_g4ib7")

@@ -1,12 +1,15 @@
-res://Assets/Sprites/HUD Elements
-res://Assets/Sprites/Enemies/Grunt Tall
-res://Scripts/Weapons
-res://Scripts/Autoloads
-res://Scenes/Weapons
-res://Scenes/Characters
-res://Scripts/Characters
-res://Assets/Sprites/Enemies/Grunt Long
-res://Scenes/Levels
-res://Scripts/HUD
-res://Scenes/HUD
-res://Scenes/Menus
+res://Assets/Shaders/
+res://Scripts/Effects/
+res://Scripts/Characters/Player/
+res://Scripts/HUD/
+res://Scripts/Characters/
+res://Scenes/Characters/
+res://Assets/Sprites/HUD Elements/
+res://Assets/Sprites/Enemies/Grunt Tall/
+res://Scripts/Weapons/
+res://Scripts/Autoloads/
+res://Scenes/Weapons/
+res://Assets/Sprites/Enemies/Grunt Long/
+res://Scenes/Levels/
+res://Scenes/HUD/
+res://Scenes/Menus/

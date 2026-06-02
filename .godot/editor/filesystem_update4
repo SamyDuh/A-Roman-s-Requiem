@@ -1,1 +1,5 @@
+res://Scenes/Characters/new_peter.tscn
+res://Assets/Shaders/pixel_outline.gdshader
+res://Assets/Shaders/WIP.gdshader
+res://Scripts/Characters/Player/player_controller.gd
 res://Scenes/Levels/demo.tscn
