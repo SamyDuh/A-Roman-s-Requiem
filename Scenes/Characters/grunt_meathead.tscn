@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://b1y7isswt7ip4"]
+
+[ext_resource type="Script" uid="uid://cex8cj4wyev7e" path="res://Scripts/Characters/human_enemy.gd" id="1_udlxa"]
+[ext_resource type="Shader" uid="uid://c62a3cxaix7ac" path="res://Assets/Shaders/pixel_outline.gdshader" id="2_ikdn7"]
+[ext_resource type="Texture2D" uid="uid://nvlahqkglkar" path="res://Assets/Sprites/Enemies/Grunt Meathead/grunt_meathead_head.png" id="2_jej7f"]
+[ext_resource type="Texture2D" uid="uid://dp3dg4bgb51yd" path="res://Assets/Sprites/Enemies/Grunt Meathead/grunt_meathead_body.png" id="2_udlxa"]
+[ext_resource type="Texture2D" uid="uid://xouatg1yh6n5" path="res://Assets/Sprites/Enemies/Grunt Meathead/grunt_meathead_shoulder.png" id="3_jej7f"]
+[ext_resource type="Texture2D" uid="uid://c5lf4s1mkmwwh" path="res://Assets/Sprites/Enemies/Grunt Meathead/grunt_meathead_arm.png" id="4_ikdn7"]
+
+[sub_resource type="Animation" id="Animation_jej7f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Head:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ikdn7"]
+resource_name = "animate"
+length = 0.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Head:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ctewo"]
+_data = {
+&"RESET": SubResource("Animation_jej7f"),
+&"animate": SubResource("Animation_ikdn7")
+}
+
+[sub_resource type="Animation" id="Animation_t5s6c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_8k6un"]
+resource_name = "run"
+length = 0.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xtuyo"]
+_data = {
+&"RESET": SubResource("Animation_t5s6c"),
+&"run": SubResource("Animation_8k6un")
+}
+
+[sub_resource type="Animation" id="Animation_wgome"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Right Arm:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_vv21c"]
+resource_name = "swing"
+length = 0.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Right Arm:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_urakb"]
+_data = {
+&"RESET": SubResource("Animation_wgome"),
+&"swing": SubResource("Animation_vv21c")
+}
+
+[sub_resource type="Animation" id="Animation_wn66b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Left Arm:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_5002p"]
+resource_name = "swing"
+length = 0.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Left Arm:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f7xy7"]
+_data = {
+&"RESET": SubResource("Animation_wn66b"),
+&"swing": SubResource("Animation_5002p")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ctewo"]
+shader = ExtResource("2_ikdn7")
+shader_parameter/color = Color(1, 0, 0, 0.23137255)
+shader_parameter/pixels_to_check = 1
+shader_parameter/center_distance_cap = 1
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jej7f"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Grunt Meathead" type="CharacterBody2D" unique_id=1586187501]
+script = ExtResource("1_udlxa")
+ARM_LENGTH = 22
+RUN_SPEED = 50
+WEAPON = "Gladius"
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1036885886]
+transparent_bg = true
+size = Vector2i(200, 200)
+
+[node name="Head" type="Sprite2D" parent="SubViewport" unique_id=682792082]
+z_index = 4
+position = Vector2(100, 100)
+texture = ExtResource("2_jej7f")
+hframes = 3
+
+[node name="Body" type="Sprite2D" parent="SubViewport" unique_id=492196875]
+z_index = 1
+position = Vector2(100, 100)
+texture = ExtResource("2_udlxa")
+hframes = 3
+
+[node name="Right Shoulder" type="Sprite2D" parent="SubViewport" unique_id=635797585]
+z_index = 3
+texture_filter = 1
+position = Vector2(97, 100)
+texture = ExtResource("3_jej7f")
+flip_h = true
+
+[node name="Left Shoulder" type="Sprite2D" parent="SubViewport" unique_id=1965390136]
+z_index = 3
+texture_filter = 1
+position = Vector2(100, 100)
+texture = ExtResource("3_jej7f")
+
+[node name="Right Arm" type="Sprite2D" parent="SubViewport" unique_id=1729242652]
+z_index = 2
+texture_filter = 1
+position = Vector2(83, 92)
+texture = ExtResource("4_ikdn7")
+centered = false
+offset = Vector2(-25, -32)
+flip_h = true
+hframes = 3
+
+[node name="Left Arm" type="Sprite2D" parent="SubViewport" unique_id=1690222574]
+z_index = 2
+texture_filter = 1
+position = Vector2(114, 92)
+texture = ExtResource("4_ikdn7")
+centered = false
+offset = Vector2(-55, -32)
+hframes = 3
+
+[node name="Animation Players" type="Node" parent="." unique_id=711914285]
+
+[node name="Head Player" type="AnimationPlayer" parent="Animation Players" unique_id=506561138]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_ctewo")
+
+[node name="Body Player" type="AnimationPlayer" parent="Animation Players" unique_id=1761837950]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_xtuyo")
+
+[node name="RArm Player" type="AnimationPlayer" parent="Animation Players" unique_id=99827515]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_urakb")
+
+[node name="LArm Player" type="AnimationPlayer" parent="Animation Players" unique_id=1120684973]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_f7xy7")
+
+[node name="SubOutput" type="Sprite2D" parent="." unique_id=27982615]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ctewo")
+texture = SubResource("ViewportTexture_jej7f")

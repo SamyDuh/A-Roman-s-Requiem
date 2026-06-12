@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dewosxl8rc13v"]
+
+[ext_resource type="Script" uid="uid://dtjmlxr6nb3wl" path="res://Scripts/Menus/pause_menu.gd" id="1_as6yf"]
+[ext_resource type="Shader" uid="uid://dfu8biqj7sf10" path="res://Assets/Shaders/blur.gdshader" id="2_1j166"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1j166"]
+shader = ExtResource("2_1j166")
+shader_parameter/blur_amount = 2.0
+
+[sub_resource type="Theme" id="Theme_tf3q2"]
+default_font_size = 88
+
+[node name="Pause Menu" type="Control" unique_id=1233479621]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_as6yf")
+
+[node name="Blur" type="ColorRect" parent="." unique_id=2023217527]
+material = SubResource("ShaderMaterial_1j166")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="ButtonContainer" type="VBoxContainer" parent="." unique_id=1720430226]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -68.0
+offset_right = 48.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_tf3q2")
+
+[node name="ResumeButton" type="MenuButton" parent="ButtonContainer" unique_id=1432126601]
+layout_mode = 2
+text = "Resume"
+
+[node name="SettingsButton" type="MenuButton" parent="ButtonContainer" unique_id=703629114]
+layout_mode = 2
+text = "Settings"
+
+[node name="MainMenuButton" type="MenuButton" parent="ButtonContainer" unique_id=1562663258]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="QuitButton" type="MenuButton" parent="ButtonContainer" unique_id=373851849]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="button_up" from="ButtonContainer/ResumeButton" to="." method="_on_resume_button_button_up"]
+[connection signal="pressed" from="ButtonContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="ButtonContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1070,7 +1070,7 @@ states/sword_swing_LR/position = Vector2(658, -131)
 states/sword_swing_RL/node = SubResource("AnimationNodeAnimation_wy4bw")
 states/sword_swing_RL/position = Vector2(964, 78)
 transitions = ["Start", "running_left", SubResource("AnimationNodeStateMachineTransition_fldwc"), "sword_swing_LR", "running_right", SubResource("AnimationNodeStateMachineTransition_c0jju"), "sword_swing_RL", "running_left", SubResource("AnimationNodeStateMachineTransition_852ta")]
-graph_offset = Vector2(118, -226)
+graph_offset = Vector2(-50, -307)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m5shk"]
 shader = ExtResource("10_m5shk")

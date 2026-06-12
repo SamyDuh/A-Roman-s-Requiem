@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var BASE_HORIZONTAL_SPEED = 75
 @export var BASE_VERTICAL_SPEED = 100
-@export var BASE_SLASH_SPEED = 100
+@export var BASE_SLASH_SPEED = 400
 @export var BASE_TACKLE_SPEED = 100
 
 @onready var anim_tree = $"SubViewport/Visuals/AnimationTree".get("parameters/playback")
@@ -46,7 +46,7 @@ func _input(event):
 		dash()
 			
 		
-		
+
 func dash():
 	if anim_tree.get_current_node() == "running_left" || anim_tree.get_current_node() == "running_right":
 		
@@ -64,7 +64,7 @@ func dash():
 			
 		
 		isDashing = true
-		velocity += 400 * slash_direction
+		velocity += BASE_SLASH_SPEED * slash_direction
 		visuals.createTrailingEffect(10,.05,.25)
 		
 		if facing_left:
@@ -75,8 +75,8 @@ func dash():
 			facing_left = true
 		
 		
-		await get_tree().create_timer(.5).timeout
+		await get_tree().create_timer(.5,false).timeout
 		
 		isDashing = false
 		rotation = 0
-		velocity -= 400 * slash_direction
+		velocity -= BASE_SLASH_SPEED * slash_direction

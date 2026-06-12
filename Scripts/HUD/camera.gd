@@ -1,6 +1,6 @@
 extends Camera2D
 
-@export var VERTICAL_OFFSET = -130
+@export var VERTICAL_OFFSET = -110
 
 
 @onready var player = get_parent().get_node("NewPeter")

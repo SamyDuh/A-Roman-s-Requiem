@@ -1,5 +1,8 @@
-res://Scenes/Characters/new_peter.tscn
+res://Scenes/Characters/grunt_meathead.tscn
 res://Assets/Shaders/pixel_outline.gdshader
+res://Assets/Shaders/blur.gdshader
 res://Assets/Shaders/WIP.gdshader
-res://Scripts/Characters/Player/player_controller.gd
-res://Scenes/Levels/demo.tscn
+res://Scripts/Characters/human_enemy.gd
+res://Scripts/Weapons/human_weapon.gd
+res://Scripts/Autoloads/visual_effects.gd
+res://Scripts/Weapons/gladius.gd
